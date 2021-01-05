@@ -1,0 +1,12 @@
+{% extends 'paradise/base.html' %}
+{% block content %}
+Welcome to the Create Page
+<div class="">
+  <form class="" enctype='multipart/form-data'  method="POST">
+    {% csrf_token %}
+
+    Are you sure you want to delete? <input type="submit" name="" style="color:red;" value="Delete"> <a href="{{ product.get_absolute_url }}">Cancel</a>
+
+  </form>
+</div>
+{% endblock content %}

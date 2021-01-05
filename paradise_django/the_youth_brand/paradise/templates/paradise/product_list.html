@@ -1,0 +1,7 @@
+{% extends 'paradise/base.html' %}
+{% block content %}
+Welcome to the List Product Page
+{% for products in product_list %}
+  <p>{{products.name}}</p>
+{% endfor %}
+{% endblock content %}
