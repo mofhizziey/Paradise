@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.IndexView.as_view(), name='index'),
     path('menu/', views.MenuView.as_view(), name='menu'),
-    path('paradise/', include('paradise.urls'))
+    path('paradise/', include('paradise.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 
