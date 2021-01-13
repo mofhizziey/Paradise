@@ -30,9 +30,10 @@ intro.from('#intro .brand-name div',{
     ease:'back.out(2)'
 },'-=1')
 intro.from('.intro-img',{
-    duration:1,
+    duration:2,
    filter:'blur(10px)',
-    opacity:0
+    opacity:0,
+    
 },"-=1")
 intro.from('#intro  .btn',{
     duration:2,
