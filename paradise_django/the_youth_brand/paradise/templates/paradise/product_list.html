@@ -101,7 +101,7 @@
           <div class="container-fluid ">
                 {% for product in product_list %}
                 <div class="card shadow rounded ">
-                  <img src="{% static 'paradise-images/hoodie.png' %}" alt="" class="card-img-top d-block ">
+                  <img src="{{product.picture.url}}" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
                     <span class="product-name fw-bold  fs-6 col-8 card-title">{{product.name}}</span>
                     <span class="price col-4 fw-bold text-primary center">${{product.price}}</span>
