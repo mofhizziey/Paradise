@@ -1,0 +1,45 @@
+.card{
+    border: none;
+    margin: 5% 0% 0% 0%;
+    padding: 1% ;
+    height: 21rem;
+       
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease-out;
+}
+.card-img-top{
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    
+}
+.card-body{
+    padding: 1% 1% 0% 3%;
+    margin-top: 5%;
+    position: relative;
+}
+.card-body .product-name{
+    font-size: 1rem;
+}
+.add-to-cart{
+  margin-bottom: 2%;
+  cursor: pointer;
+    width: 40%;
+    text-align: right;
+}
+.add-to-cart:hover{
+    color: #4c80f1;
+}
+.save{
+    cursor: pointer;
+    margin-top: 2%;
+}
+.carousel{
+    width: 70%;
+}
+
+
+
+

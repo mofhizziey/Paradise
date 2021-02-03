@@ -1,6 +1,8 @@
-
+html{
+    scroll-behavior: smooth;
+}
 .overall{
-    padding: 1% 4% 2% 4%;
+    padding: 1% 2% 2% 2%;
     
 }
 .first-container{

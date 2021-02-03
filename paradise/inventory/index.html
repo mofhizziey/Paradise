@@ -13,51 +13,94 @@
 </head>
 <body>
      
-    <div class="overall">
+    <div class="overall" id="top">
+  
+    
+        <!-- fade bg -->
+  
+   <div class="fade-bg"></div>
+
+   <!-- cateory sidebar -->
+
+    <nav class="category-sidebar  container-fluid">
+ 
+      <div class="side-top">
+        <button class="btn btn-danger close-sidebar ms-auto"><i class="fas fa-times"></i> Close</button>
+        <h3 class="navbar-brand sectionHeader">Categories</h3>
+        <br> 
+          
+     </div>
+     <div class="side-main">
+       
+      <div class="category mens-category ">
+        <h1 class="navbar-brand">Mens Fashion</h1>
+        <h1 class="lead">We Have...</h1>
+
+        <ul class="options list-group list-group-flush">
+          <li class="list-group-item active" data-category="hoodies">hoodies</li>
+          <li class="list-group-item" data-category="shirts">shirts</li>
+          <li class="list-group-item" data-category="joggers">joggers</li>
+          <li class="list-group-item" data-category="sweatshirts">sweatshirts</li>
+        </ul>
+      </div>
+
+      <div class="category womens-category hide">
+        <h1 class="navbar-brand">Womens Fashion</h1>
+        <h1 class="lead">We Have...</h1>
+
+        <ul class="options list-group list-group-flush">
+          <li class="list-group-item active" data-category="crop-tops">Crop-Tops</li>
+          <li class="list-group-item" data-category="hoodies">Hoodies</li>
+          
+        </ul>
+      </div>
+       
+ 
+   
+     </div>
+    </nav>
+
+
+      <nav id="nav" class="navbar  navbar-expand navbar-light bg-light" >
+        
+        <h1 href="#" class="navbar-brand mb-0 ps-2  d-block center" >Paradise</h1>
+        
+        <div class="container-fluid  px-1"> 
+             
+             
+              <ul class="navbar-nav   center ">    
+                <ul class="save-n-cart rounded navbar-nav "> 
                 
-        <nav class="navbar  navbar-expand-lg navbar-light bg-light rounded pb-3 shadow-sm ">
-            <div class="container-fluid  px-1"> 
-             <span href="#" class="navbar-brand mb-0 ps-2  h1">Paradise</span>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon" ></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item pe-3  ">
-                      <a href="" class="d-inline-block cart text-primary nav-link" ><i class="bi bi-cart  "></i> Cart</a>
-                  </li>
-                  <li class="nav-item pe-3  ">
-                      <a href="" class="d-inline-block saved text-danger nav-link" ><i class="bi bi-heart  "></i> Saved</a>
-                  </li>
-                  
-                    <li class="nav-item pe-3 ">
-                        <a href="" class="nav-link d-inline-block"><i class="bi bi-house "></i> Home</a>
+                  <li class="nav-item "> 
+                    <a href="" class="d-inline-block cart text-primary nav-link" ><span class="count">0</span><i class="bi bi-cart  "></i> Cart</a>
+                 </li>  
+                 <li class="nav-item ">   
+                  <a href="" class="d-inline-block saved text-danger nav-link" ><span class="count ">0</span><i class="bi bi-heart  "></i> Saved</a>
+                 </li>
+               </ul>
+                
+                    <li class="nav-item ">
+                        <a href="../homepage/index.html" class="nav-link d-inline-block"><i class="bi bi-house "></i> Home</a>
                     </li>
-                    <li class="nav-item pe-3  ">
+                    <li class="nav-item  ">
                         <a href="" class="nav-link d-inline-block"><i class="bi bi-sliders "></i> Menu</a>
                     </li>
                 </ul>
-            </div>
-        </div> 
+            
+          </div> 
            </nav> 
            
+   <!-- category sidebar trigger -->
+
+   <button class="btn bg-dark text-light category-btn btn-lg"><i class="fas fa-filter"></i> Categories  </button>
+ 
            <!-- filters -->
            
              <section class="filter mt-4">
                  <div class="container-fluid ">
                   <div class="">
-                      <select name="" class="form-select category">
-                          <option value="default" selected>Category</option>
-                      </select>
-                    </div>
-                  <div class="">
                       <select name="" class="form-select size ">
                         <option value="default" selected>Size</option>
-                      </select>
-                    </div>
-                  <div class="">
-                      <select name=""  class="form-select Color ">
-                        <option value="default" selected>Color</option>
                       </select>
                     </div>
                   <div class="">
@@ -74,8 +117,8 @@
              </section>
          
             <div class="merch-switch mt-3 center  ">
-              <button class="btn active  fw-bold mens-merch me-2">Mens Fashion</button>
-          <button class="btn fw-bold womens-merch">Womens Fashion</button>
+              <button class="btn active  fw-bold mens-merch me-2 rounded">Mens Fashion</button>
+          <button class="btn fw-bold womens-merch rounded">Womens Fashion</button>
         </div>
         
           <main>
@@ -97,12 +140,14 @@
         <!-- mens wears -->
 
             <section id="mens-wears" >
-              <h3 class="center sectionHeader">Mens Fashion</h3>
-              <div class="container-fluid ">
-                    <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+              
+              <div id="hoodies" class="container-fluid mens-category active">
+                <h3 class="center sectionHeader">Hoodies</h3>
+                 <div class="display">
+                     <div class="card shadow rounded ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -111,9 +156,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -122,9 +167,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -133,9 +178,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -144,9 +189,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -155,9 +200,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -166,9 +211,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -177,9 +222,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -188,9 +233,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -199,9 +244,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -210,9 +255,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -221,9 +266,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -232,9 +277,9 @@
                         </div>
                     </div>
                     <div class="card shadow rounded ">
-                        <img src="hoodie.png" alt="" class="card-img-top d-block ">
+                        <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
                         <div class="card-body row ">
-                          <span class="product-name fw-bold  fs-6 col-8 card-title">Danami Hoodie</span>
+                          <span class="product-name fw-bold   col-8 card-title">Danami Hoodie</span>
                           <span class="price col-4 fw-bold text-primary center">$100</span>
                           <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
                           <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -242,21 +287,67 @@
                          
                         </div>
                     </div>
-                  
-                  
+                </div>                
               </div>
+
+                <!-- another category -->
+                  
+               <div id="shirts"  class="mens-category container-fluid hide" >
+                 <h1 class="sectionHeader center">shirts</h1>
+                 <div class="display">
+                  
+                  <div class="card shadow rounded ">
+                    <img src="products/t-shirt.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold   col-8 card-title">Black plain t-shirt</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">100% cotton</span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     
+                    </div>
+                </div>
+
+                 </div>
+
+                 </div>
+                
+
+               <div id="joggers"  class="mens-category container-fluid hide" >
+                 <h1 class="sectionHeader center">Joggers</h1>
+                 <div class="display">
+                    
+                  <div class="card shadow rounded ">
+                    <img src="products/mens-joggers.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold   col-8 card-title">grey Mens Joggers</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">100% cotton</span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     
+                    </div>
+                </div>
+
+
+                 </div>
+
+                 </div>
+              
             </section>
         
           <!-- womens wears -->
 
             <section id="women-wears" class="hide">
-               <h3 class="sectionHeader center">Womens Fashion</h3>
-              <div class="container-fluid">
+
+          <div id="crop-tops" class="container-fluid womens-category active">
+            <h3 class="sectionHeader center">Crop-Tops</h3>
+              <div class="display">
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -266,9 +357,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -278,9 +369,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -290,9 +381,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -302,9 +393,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -314,9 +405,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -326,9 +417,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -338,9 +429,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -350,9 +441,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -362,9 +453,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -374,9 +465,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -386,9 +477,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -398,9 +489,9 @@
               </div>
                 
               <div class="card shadow rounded ">
-                  <img src="women-hoodie.png" alt="" class="card-img-top d-block ">
+                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
-                    <span class="product-name fw-bold  fs-6 col-8 card-title">Womens Crop swearshirt </span>
+                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
                     <span class="price col-4 fw-bold text-primary center">$100</span>
                     <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
                     <i class="bi bi-heart fs-4 save col-6 "></i> 
@@ -410,14 +501,62 @@
               </div>
                 
               </div>
+            </div>
+
+            <div id="hoodies" class="womens-category container-fluid hide">
+              <h3 class="sectionHeader">Hoodies</h3>
+              <div class="display">
+
+              </div>
+            </div>
               </section>
-        
+
+          <!-- scroll to top --> 
+   
+   <div class="scrollTop">
+     <a href="#top" class="text-light bg-primary nav-link rounded" >
+       <i class="fas fa-chevron-up fa-2x"></i>
+      </a>
+    </div>
+
         </main>
         
      </div>
 
+     <!-- footer -->
 
-
+   <footer>
+    <div class="container-fluid text-light bg-dark  center">
+     
+     <span class="brand-name ">
+         <div></div>
+          PARADISE
+       </span>
+        
+       <div class="row w-50">
+            <div class="contact col-md-4">
+              <h4>Contact us</h4>
+              <ul class="p-0">
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="bi bi-telephone"></i> 08034445675</a>
+                  
+              </ul>
+            </div>
+            <div class="socials col-md-4 ">
+             <h4>Follow us</h4>
+             <a href="#" class="nav-link link-light"><i class="fab fa-instagram"></i> Instagram</a>
+             <a href="#" class="nav-link link-light"><i class="fab fa-twitter"></i> Twitter</a>
+              
+             </div>
+            <div class="about col-md-4">
+                <h4>About Us</h4>
+                <a href="#" class="nav-link link-light">About us</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    
 
 
 
