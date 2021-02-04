@@ -183,7 +183,7 @@ mensMerchBtn.on('click',()=>{
 let save=document.querySelectorAll('.save')
 let addToCart=document.querySelectorAll('.add-to-cart')
   let savedCount=document.querySelector('.saved .count')
-   let atcCount=document.querySelector('.cart .count')
+   let cartCount=document.querySelector('.cart .count')
 
 let addToSavedCount=(e)=>{
   let currentCount=Number(savedCount.textContent)
@@ -196,9 +196,21 @@ let addToSavedCount=(e)=>{
     savedCount.innerHTML=newCount 
   }
 }  
+let addToCartCount=(e)=>{
+  let currentCount=Number(cartCount.textContent)
+ 
+  let newCount=currentCount + 1
+  cartCount.innerHTML=newCount 
+
+  alert('added to cart')
+  
+}  
 
 save.forEach((saveBtn)=>{
   saveBtn.addEventListener('click',addToSavedCount)
+})
+addToCart.forEach((addBtn)=>{
+  addBtn.addEventListener('click',addToCartCount)
 })
 
 

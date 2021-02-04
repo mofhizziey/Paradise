@@ -55,20 +55,29 @@ html{
 
 .category-sidebar.container-fluid{
     position: fixed;
-    width: 30%;
+    width: 25%;
     height: 100%;
     z-index: 6;
-    background: #ebebe5;
+    background: rgb(5, 3, 17);
+    color: white;
     padding: 0;
     left: -30%;
-    border: 1px solid rgba(87, 83, 83, 0.918);
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
     transition: all 0.5s linear;
 }
-.category-sidebar.active{
+.category-sidebar.container-fluid .list-group-item{
+    background: none;
+    border: 1px solid ;
+}
+.category-sidebar.container-fluid .list-group-item.active{
+    background: rgb(255, 255, 255);
+    border: none;
+    color: black;
+}
+.category-sidebar.container-fluid.active{
     left: 0;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.822);
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.404);
 }
 .category-sidebar .close-sidebar{
     position: absolute;
@@ -186,7 +195,7 @@ span.count{
 .filter .container-fluid{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10%;
+    margin-top: 2%;
 
 }
 .filter .container-fluid div{
@@ -220,8 +229,8 @@ span.count{
 .card{
     border: none;
     margin: 5% 0% 0% 0%;
-    padding: 1% ;
-    height: 21rem;
+    padding: 1% 1% 2% 1% ;
+    height: 23rem;
        
 }
 .card:hover{
@@ -235,7 +244,7 @@ span.count{
     
 }
 .card-body{
-    padding: 1% 1% 0% 3%;
+    padding: 1% 1% 2% 3%;
     margin-top: 5%;
     position: relative;
 }
@@ -245,7 +254,7 @@ span.count{
 .add-to-cart{
   margin-bottom: 2%;
   cursor: pointer;
-    width: 40%;
+    width: 5rem;
     text-align: right;
 }
 .add-to-cart:hover{
@@ -295,14 +304,19 @@ footer .row{
 }
 
 @media(max-width:1024px){
-   
+.category-btn{
+    top: 9%;
+}   
 
 }
 @media(max-width:768px){
     .category-sidebar.container-fluid{
-        width: 70%;
-        left: -73%;
+        left:-40%;
+        width:40%
         
+    }
+    .filter .container-fluid{
+        margin-top: 10%;
     }
     .card{
         height: 100%;
@@ -336,7 +350,7 @@ footer .row{
 }
 @media(max-width:426px){
     .filter .container-fluid{
-        margin-top: 19%;
+        margin-top: 15%;
     }
     .category-btn{
         left: 1rem;
@@ -350,10 +364,14 @@ footer .row{
         font-family: cursive;
         font-weight: 600;
         font-size: 1.3em;
+        text-decoration: underline;
+    }.category-sidebar.container-fluid .side-main{
+        font-size: .8em;
     }
     .category-sidebar.container-fluid{
-        width: 50%;
-        left:-53%;
+        width: 60%;
+        left:-63%;
+        
     }
     .nav-item{
         padding: 0rem .7rem 0rem .7rem;
@@ -388,6 +406,9 @@ footer .row{
         width: 80%;
         left:-83%;
     }
+    .filter .container-fluid{
+        margin-top: 17%;
+    }
     .card{
         width: 10rem;
     }
@@ -411,8 +432,8 @@ footer .row{
         gap: 1rem .5rem;     
     }
     .card{
-        width: 12rem;
-        height: 20rem;
+        width: 15rem;
+        height: 22rem;
     }
     .card-body .product-name{
         font-size: 1em;
