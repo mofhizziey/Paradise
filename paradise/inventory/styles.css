@@ -26,7 +26,11 @@ html{
    right: 3%;
    z-index: 5;
  padding: 10px;
+ opacity: 0.9;
  
+}
+.scrollTop.hide{
+    display: none;
 }
 /*loader*/
 
@@ -194,7 +198,7 @@ span.count{
 
 
 /*product display*/
-
+ 
 #mens-wears.hide{
     display: none;
 }

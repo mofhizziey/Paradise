@@ -69,27 +69,44 @@ let categorySidebar=$('.category-sidebar')
 let mensCategoryOptions=document.querySelectorAll('.category-sidebar .side-main .mens-category .list-group-item')
   let womenCategoryOptions=document.querySelectorAll('.category-sidebar .side-main .womens-category .list-group-item')
   let categories=document.querySelectorAll('.mens-category') 
-    let categoryBtns=document.querySelectorAll('.category-sidebar .options .list-group-item')
+   
 
 let switchCategory=(e)=>{
-  let categorySelected=$(`#${e.target.dataset.category}`)
+  let optionBtn=e.target
+  let categorySelected=$(`#${optionBtn.dataset.category}`)
   
-  //toggling active category options
 
     if(categorySelected.hasClass('active')===false){
 
-    //-toggling active category btns
+     let currentCategory;
+      
+     let optionGroup=optionBtn.parentElement.parentElement
+
+     if(optionGroup.classList.contains('mens-category')){
+
+      //toggling active category btns
     
-    categoryBtns.forEach((button)=>{
+     mensCategoryOptions.forEach((button)=>{
+      button.classList.remove('active')
+     })
+      optionBtn.classList.add('active')
+       
+      currentCategory=document.querySelector(`#mens-wears .mens-category.active`)
+     
+     }else if(optionGroup.classList.contains('womens-category')){
+
+        //-toggling active category btns
+    
+        womenCategoryOptions.forEach((button)=>{
         button.classList.remove('active')
-    })
-    e.target.classList.add('active')
+        })
+        optionBtn.classList.add('active')
 
-      //toggling active categories
+        currentCategory=document.querySelector(`#women-wears .womens-category.active`)
+     
+     
+      }
 
-     let currentCategory=document.querySelector('#mens-wears mens-category.active')
-
-     console.log(document.querySelector('#mens-wears .mens-category.active'))
      currentCategory.classList.toggle('hide')
      currentCategory.classList.toggle('active')
     //
@@ -97,18 +114,21 @@ let switchCategory=(e)=>{
       loader.toggleClass('hide')   
           
       categorySelected.toggleClass('active')
-      load(categorySelected)
-      
-      console.log(document.querySelector('#mens-wears .mens-category.active'))
+      load(categorySelected)      
     }
 } 
 
-mensCategoryOptions.forEach((option)=>{
-  option.addEventListener('click',switchCategory)
+$('document').ready(()=>{
+
+  mensCategoryOptions.forEach((option)=>{
+    option.addEventListener('click',switchCategory)
+  })
+  womenCategoryOptions.forEach((option)=>{
+    option.addEventListener('click',switchCategory)
+  })
+  
 })
-womenCategoryOptions.forEach((option)=>{
-  option.addEventListener('click',switchCategory)
-})
+
 
 /**Merch switch  */
 
@@ -143,7 +163,7 @@ mensMerchBtn.on('click',()=>{
     loader.toggleClass('hide')
      womensMerch.toggleClass('hide')
        
-     /**toggling categories */ 
+     /**toggling category options */ 
      
      mensOptions.classList.toggle('hide')
       womensOptions.classList.toggle('hide')
@@ -181,3 +201,13 @@ save.forEach((saveBtn)=>{
   saveBtn.addEventListener('click',addToSavedCount)
 })
 
+
+document.addEventListener('scroll',()=>{
+  if(window.pageYOffset>850){
+    $('.scrollTop').removeClass('hide')
+
+  }else{
+    $('.scrollTop').addClass('hide')
+    
+  }
+})
