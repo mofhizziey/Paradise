@@ -100,6 +100,7 @@
           <h3 class="center sectionHeader">Mens Fashion</h3>
           <div class="container-fluid ">
                 {% for product in product_list %}
+              <a href="{{product.get_absolute_url}}">
                 <div class="card shadow rounded ">
                   <img src="{{product.picture.url}}" alt="" class="card-img-top d-block ">
                   <div class="card-body row ">
@@ -111,6 +112,7 @@
                    
                   </div>
               </div>  
+              </a>
                 {% endfor %}
                              
               </div>

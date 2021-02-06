@@ -1,0 +1,11 @@
+{% extends 'paradise/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container p-4">
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="submit" name="" id="">
+    </form>
+</div>
+{% endblock %}

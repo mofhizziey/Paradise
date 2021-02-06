@@ -1,10 +1,11 @@
 {% extends 'paradise/base.html' %}
+{% loaf crispy_forms_tags%}
 {% block content %}
 Welcome to the Create Page
 <div class="">
   <form class="" enctype='multipart/form-data'  method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form | crispy}}
     <input type="submit" name="Submit" value="Submit">
   </form>
 </div>
