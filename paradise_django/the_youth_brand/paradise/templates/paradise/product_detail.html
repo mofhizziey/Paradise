@@ -8,13 +8,5 @@
   {% endfor %}
 {% endif %}
 
-<div class="container text-center">
-<p>This is the detail of the page</p>
-<img class="img-fluid" src="{{product.picture.url}}" alt="">
-<p>{{product.name}}</p>
-<p>{{product.price}}</p>
-<p>{{product.size}}</p>
-<a href="{{product.get_add_to_cart_url}}" class="btn btn-danger">Add to cart</a>
-<a href="{{product.get_remove_from_cart_url}}" class="btn btn-danger">Remove from cart</a>
-</div>
+
 {% endblock content %}

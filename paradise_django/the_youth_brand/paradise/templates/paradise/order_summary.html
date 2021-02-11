@@ -1,40 +1,5 @@
 {% extends 'paradise/base.html' %}
 
 {% block content %}
-<section>
-    <div class="container p-3">
-        <h2>Order Summary</h2>
-
-<table class="table">
-    <thead>
-        <tr>
- 
-            <th scope="col">Name</th>
-            <th scope="col"> Price</th>
-            <th scope="col"> Quantity</th>
-            <th scope="col">Total Item Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        {%  for product_order in object.products.all %}
-        <tr>
-     
-            <td>{{ product_order.product.name }}</td>
-            <td>{{ product_order.product.price }}</td>
-            <td> x {{ product_order.quantity }}</td>
-            <td>{{product_order.get_total_product_price}}</td>
-        </tr>
-   
-        {% endfor %}
-        <tr>
-            <td colspan="4">Order Total</td>
-            <td colspan="5">#{{object.get_total}}</td>
-        </tr>
-    </tbody>
-</table>
-
-
-    </div>
-</section>
 
 {% endblock %}
