@@ -1,16 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import TemplateView, CreateView, ListView, DeleteView, UpdateView, DetailView, View
-# Create your views here.
 from django.core.exceptions import ObjectDoesNotExist
 from paradise import models
 from django.contrib import messages
-from paradise import forms
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from paradise.forms import CheckOutForm
 
 class IndexView(TemplateView):
     template_name = 'paradise/index.html'
@@ -24,21 +21,22 @@ class ProductCreateView(CreateView):
     model = models.Product
 
 class ProductListView(ListView):
-    template_name = 'paradise/product_list.html'
+    template_name = 'paradise/Products/product_list.html'
     model = models.Product
+    context_object_name = 'products'
 
 class ProductUpdateView(UpdateView):
     fields = ('name', 'picture', 'price', 'size')
-    template_name = 'paradise/product_edit.html'
+    template_name = 'paradise/Products/product_edit.html'
     model = models.Product
 
 class ProductDeleteView(DeleteView):
-    template_name = 'paradise/product_delete.html'
+    template_name = 'paradise/Products/product_delete.html'
     model = models.Product
     success_url = reverse_lazy('paradise:detail')
 
 class ProductDetailView(DetailView):
-    template_name = 'paradise/product_detail.html'
+    template_name = 'paradise/Products/product_detail.html'
     model = models.Product
 
 
@@ -123,38 +121,7 @@ class OrderSummaryView(LoginRequiredMixin, View):
             messages.error(self.request, 'You do not have an active rorder')
             return redirect('/') 
 
-class CheckOutView(LoginRequiredMixin, View):
-    def get(self, *args, **kwargs):
-        form = CheckOutForm()
-        context = {
-            'form':form
-         }
-        return render(self.request, 'paradise/checkout.html', context)
 
-
-    def post(self, *args, **kwargs):
-        form = CheckOutForm(self.request.POST or None)
-        context = {
-            'form':form
-         }
-        try:
-            order = models.Order.objects.get(user=self.request.user, ordered=False)
-            if form.is_valid():
-                billing_address = models.BillingAddress(
-                    user=self.request.user,
-                    street_address=street_address,
-                    country=country,
-                    zip=zip
-                )
-                billing_address.save()
-                print('Form is valid')
-                return redirect('paradise:checkout')
-            else:
-                print('form is invalid')
-        except ObjectDoesNotExist:
-            messages.error(self.request, 'You do not have an active order')
-            return redirect('paradise:checkout') 
-        return render(self.request, 'paradise/checkout.html', context)
 
         
 class CheckOut(CreateView):

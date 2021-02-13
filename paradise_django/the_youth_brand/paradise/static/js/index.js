@@ -1,7 +1,4 @@
 /** gsap plugins */
-
-gsap.registerPlugin(ScrollToPlugin)
-
 let intro=gsap.timeline()
 
 intro.from('#intro .container-fluid',{
@@ -48,22 +45,9 @@ intro.from('#intro .quote blockquote',{
     ease:'back.out(2)'
 },'-=1')
 
-/**scroll to events */
 
-function scrollTO(triggers,target){
-   document.querySelectorAll(triggers).forEach((trigger)=>{
-       trigger.addEventListener('click',(e)=>{
-          
-        e.preventDefault()
-           gsap.to(window,{
-            duration:2,
-            scrollTo:{y:target,}
-          })
-       })
-   })
-}
 
-scrollTO('.toMerch','#merch')
+
 
 /**toggling nav-icon */
 
@@ -81,6 +65,23 @@ document.addEventListener('DOMContentLoaded',()=>{
             button.classList.add('navbar-toggler-icon')
          }
     })
+
+    /**scroll to function   
+
+function scrollTO(triggers,target){
+    document.querySelectorAll(triggers).forEach((trigger)=>{
+        trigger.addEventListener('click',(e)=>{
+           
+         e.preventDefault()
+            gsap.to(window,{
+             duration:2,
+             scrollTo:{y:target}
+           })
+        })
+    })
+ }*/
+ 
+
 })
 
 window.onload=()=>{console.log('loaded')}

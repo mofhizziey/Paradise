@@ -1,0 +1,454 @@
+{% extends 'paradise/base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/order_summary.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+        <!-- NAVIGATION -->
+
+        <nav id="nav" class="navbar  navbar-expand navbar-light bg-light" >
+        
+            <h1 href="#" class="navbar-brand mb-0 ps-2 sofia d-block center" >Paradise</h1>
+          
+            
+            <div class="container-fluid  px-1"> 
+                 
+                 
+                  <ul class="navbar-nav   center ">    
+                    <ul class="save-n-cart rounded navbar-nav "> 
+                    
+                    <li class="nav-item "> 
+                        <a href="" class="d-inline-block cart text-primary nav-link" ><span class="count">0</span><i class="bi bi-cart  "></i> Cart</a>
+                     </li>  
+                     <li class="nav-item ">   
+                      <a href="" class="d-inline-block saved text-danger nav-link" ><span class="count ">0</span><i class="bi bi-heart  "></i> Saved</a>
+                     </li>
+                   </ul>
+                    
+                    <li class="nav-item ">
+                        <a href="../homepage/index.html" class="nav-link d-inline-block"><i class="bi bi-house "></i> Home</a>
+                    </li>
+                    <li class="nav-item  ">
+                         <a href="" class="nav-link d-inline-block"><i class="bi bi-sliders "></i> Menu</a>
+                    </li>
+                    </ul>
+                
+              </div> 
+               </nav> 
+
+
+        <main class="container-fluid">
+
+            <h1 class="navbar-brand text-muted">Product Info</h1>
+            <div class="grid"> 
+
+                <!-- product display -->
+                
+                <div class="section1 imageDisplay">
+                
+
+                    <div id="carouselExampleFade" class=" carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" >
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="2"></li>
+                          </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="product-images/IMG-20210103-WA0061.jpg" class=" d-block" alt="">
+
+                        </div>
+                          <div class="carousel-item">
+                          <img src="product-images/IMG-20210103-WA0063.jpg" class="d-block" alt="">
+
+                        </div>
+                          <div class="carousel-item">
+                            <img src="product-images/IMG-20210103-WA0064.jpg" class="d-block" alt="">
+
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+                          <span class="fas fa-chevron-left fa-2x text-dark" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+                          <span class="fas fa-chevron-right fa-2x text-dark" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </a>
+                      </div>
+                          
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+                <!--  prefernces -->
+                
+         <div class="cta container-fluid ">
+            
+           <div class="grid">   
+                <p class="product-name">product-name</p>
+                 
+                <p class="price">$100</p>
+
+                <div class="Rating">
+                    <h5>Ratings</h5>
+                <div class="fs-4 my-0">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                 </div>
+            
+                </div>
+                <div class="product-colors ">
+                    <h5>Select Color*</h5>
+                    <div class="black bg-dark active"> <i class="bi bi-check fs-4 text-info"></i> </div>
+                    <div class="white bg-light"></div>
+                    <div class="yellow bg-warning"></div>
+                </div>
+               
+                <div class="product-quantity">
+                    <label for="#quantity" class="form-input-label ">Quantity :</label>
+                    <input type="number" min="0" class="form-input">
+                </div>
+                <div class="product-sizes ">
+                    <h5> Select Size*</h5>
+
+                       <div class="L ">L</div>
+                       <div class="XL">XL</div>
+                       <div class="S">S</div>
+                       <div class="XS">XS</div> 
+
+                </div>
+            </div>   
+            <button class="btn-dark btn-lg  center cta-btn">Add To Cart</button>
+              
+                    
+        </div>
+
+                
+        
+        <!-- testimonials -->
+        
+        <div class="section3 user-reviews">
+            <h3 class="sectionHeader text-primary">User Reviews</h3>
+
+            <div class="reviews shadow-sm">
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+            </div>
+
+            <div class="addReview">
+                <h3 class="sectionHeader mb-3">Leave a review...</h3>
+             <textarea name="new-review" id="new-review" cols="50" rows="5" placeholder="Say Something..."></textarea>
+
+            </div>
+
+        </div>
+        
+        <!-- details -->
+        
+        <div class="section4 ">
+
+           <div class="details">
+               <h3 class=" ">Details <button class="btn btn-outline-dark toggler"><i class="fas fa-plus"></i></button></h3>
+        
+               <!-- extra info on product -->
+
+               <div class="detail-content">
+                   
+                   <div class="extra-info">
+                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugit veniam ratione eius accusantium laudantium? Illo velit sint beatae quibusdam!
+                   </div>
+                      <div class="product-care">
+                          <h3 class="fs-6">Content + Care</h3>
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                          </ul>
+                        </div>
+                    <div class="product-size">
+                        <h3 class="fs-6">Size + Fit</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>                       
+               </div>
+            </div>     
+            
+            <hr>
+
+            <!-- shipping info -->
+                
+            <div class="shipping-info">
+                <h3 class=" ">Shipping Details <button class="btn btn-outline-dark toggler"><i class="fas fa-plus"></i></button></h3>
+                 <div class="shipping-content">
+                    <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores at rem iste tenetur, est ipsam?</p>
+                    <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores at rem iste tenetur, est ipsam?</p>
+                 </div>
+            </div>
+
+            <hr>
+             
+            
+        </div>
+    
+    
+    </div>
+        
+    <section class="suggestions mt-5">
+        <div class="container-fluid">
+
+            <h3 class="sectionHeader center " >You may also like...</h3>
+
+            <div class="carousel ">
+              
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+                <div class="card shadow rounded ">
+                    <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                    <div class="card-body row ">
+                      <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                      <span class="price col-4 fw-bold text-primary center">$100</span>
+                      <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                      <i class="bi bi-heart fs-4 save col-6 "></i> 
+                      <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                     <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+                  
+                     
+                    </div>
+                </div>
+         
+            
+     
+            </div>
+
+            <div class="prev-arr"> 
+                <span><i class="fas fa-chevron-left fa-2x "></i></span>
+              </div>    
+          
+              <div class="next-arr">
+                <span><i class="fas fa-chevron-right fa-2x "></i></span>
+              </div>
+        </div>
+     
+        
+    </section>
+
+
+
+
+            
+        </main>
+
+
+
+
+
+
+  <!-- footer -->
+
+  <footer>
+    <div class="container-fluid text-light bg-dark  center">
+     
+     <span class="brand-name sofia fw-bold">
+         <div></div>
+          Paradise
+       </span>
+        
+       <div class="row w-50">
+            <div class="contact col-md-4">
+              <h4>Contact us</h4>
+              <ul class="p-0">
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="bi bi-telephone"></i> 08034445675</a>
+                  
+              </ul>
+            </div>
+            <div class="socials col-md-4 ">
+             <h4>Follow us</h4>
+             <a href="#" class="nav-link link-light"><i class="fab fa-instagram"></i> Instagram</a>
+             <a href="#" class="nav-link link-light"><i class="fab fa-twitter"></i> Twitter</a>
+              
+             </div>
+            <div class="about col-md-4">
+                <h4>About Us</h4>
+                <a href="#" class="nav-link link-light">About us</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/order_summary.js' %}"></script>
+{% endblock %}

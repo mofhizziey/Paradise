@@ -1,0 +1,242 @@
+{% extends 'paradise/base.html' %}
+{%load static%}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/order_summary.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+        <!-- NAVIGATION -->
+
+        <nav id="nav" class="navbar  navbar-expand navbar-light bg-light" >
+        
+            <h1 href="#" class="navbar-brand mb-0 ps-2 sofia d-block center" >Paradise</h1>
+          
+            
+            <div class="container-fluid  px-1"> 
+                 
+                 
+                  <ul class="navbar-nav   center ">    
+                    <ul class="save-n-cart rounded navbar-nav "> 
+                    
+                    <li class="nav-item "> 
+                        <a href="" class="d-inline-block cart text-primary nav-link" ><span class="count">0</span><i class="bi bi-cart  "></i> Cart</a>
+                     </li>  
+                   
+                   </ul>
+                    
+                    <li class="nav-item ">
+                        <a href="{% url 'index' %}" class="nav-link d-inline-block"><i class="bi bi-house "></i> Home</a>
+                    </li>
+                    <li class="nav-item  ">
+                         <a href="" class="nav-link d-inline-block"><i class="bi bi-sliders "></i> Menu</a>
+                    </li>
+                    </ul>
+                
+              </div> 
+               </nav> 
+
+
+        <main class="container-fluid">
+
+            <h1 class="navbar-brand text-muted">Product Info</h1>
+            <div class="grid"> 
+
+                <!-- product display -->
+                
+                <div class="section1 imageDisplay">
+                
+
+                    <div id="carouselExampleFade" class=" carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" >
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleFade" data-bs-slide-to="2"></li>
+                          </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="{{product.picture.url}}" class=" d-block" alt="">
+
+                        </div>
+                          <div class="carousel-item">
+                          <img src="{{product.picture.url}}" class="d-block" alt="">
+
+                        </div>
+                          <div class="carousel-item">
+                            <img src="{{product.picture.url}}" class="d-block" alt="">
+
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+                          <span class="fas fa-chevron-left fa-2x text-dark" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+                          <span class="fas fa-chevron-right fa-2x text-dark" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </a>
+                      </div>
+                          
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+                <!--  prefernces -->
+                
+         <div class="cta container-fluid ">
+            
+           <div class="grid">   
+                <p class="product-name">{{product.name}}</p>
+                 
+                <p class="price">${{product.price}}</p>
+
+                <div class="Rating">
+                    <h5>Ratings</h5>
+                <div class="fs-4 my-0">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                 </div>
+            
+                </div>
+                <div class="product-colors ">
+                    <h5>Select Color*</h5>
+                    <div class="black bg-dark active"> <i class="bi bi-check fs-4 text-info"></i> </div>
+                    <div class="white bg-light"></div>
+                    <div class="yellow bg-warning"></div>
+                </div>
+               
+                <div class="product-quantity">
+                    <label for="#quantity" class="form-input-label ">Quantity : </label>
+                    <input type="text" value="{{product.quantity}}" class="form-input">
+                </div>
+                <div class="product-sizes ">
+                    <h5> Select Size*</h5>
+
+                       <div class="L ">L</div>
+                       <div class="XL">XL</div>
+                       <div class="S">S</div>
+                       <div class="XS">XS</div> 
+
+                </div>
+            </div>   
+            <a href="{{product.get_add_to_cart}}" class="btn-dark btn-lg  center cta-btn">Add To Cart</a>
+              
+                    
+        </div>
+
+                
+        
+        <!-- testimonials -->
+        
+        <div class="section3 user-reviews">
+            <h3 class="sectionHeader text-primary">User Reviews</h3>
+
+            <div class="reviews shadow-sm">
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+                <div class="review">
+                    <h4 class="username">John doe</h4>
+                    <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, laudantium?</p>
+                </div>
+            </div>
+
+            <div class="addReview">
+                <h3 class="sectionHeader mb-3">Leave a review...</h3>
+             <textarea name="new-review" id="new-review" cols="50" rows="5" placeholder="Say Something..."></textarea>
+
+            </div>
+
+        </div>
+        
+        <!-- details -->
+        
+        <div class="section4 ">
+
+           <div class="details">
+               <h3 class=" ">Details <button class="btn btn-outline-dark toggler"><i class="fas fa-plus"></i></button></h3>
+        
+               <!-- extra info on product -->
+
+               <div class="detail-content">
+                   
+                   <div class="extra-info">
+                       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugit veniam ratione eius accusantium laudantium? Illo velit sint beatae quibusdam!
+                   </div>
+                      <div class="product-care">
+                          <h3 class="fs-6">Content + Care</h3>
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                              <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                          </ul>
+                        </div>
+                    <div class="product-size">
+                        <h3 class="fs-6">Size + Fit</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                            <li class="list-group-item">- Lorem, ipsum dolor.</li>
+                        </ul>
+                    </div>                       
+               </div>
+            </div>     
+            
+            <hr>
+
+            <!-- shipping info -->
+                
+            <div class="shipping-info">
+                <h3 class=" ">Shipping Details <button class="btn btn-outline-dark toggler"><i class="fas fa-plus"></i></button></h3>
+                 <div class="shipping-content">
+                    <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores at rem iste tenetur, est ipsam?</p>
+                    <p>*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores at rem iste tenetur, est ipsam?</p>
+                 </div>
+            </div>
+
+            <hr>
+             
+            
+        </div>
+    
+    
+    </div>
+        
+    
+
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/order_summary.js' %}"></script>
+{% endblock %}

@@ -1,61 +1,62 @@
 {% extends 'paradise/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href='{% static "css/styles.css" %}'>
+{% endblock %}
+
 {% block content %}
-<div class="overall">
+  <div class="overall">
   
         
-    <nav class="navbar  navbar-expand-lg navbar-light bg-light rounded pb-3 shadow-sm ">
-     <div class="container-fluid  px-1"> 
-      <span href="#" class="navbar-brand mb-0 ps-2  h1">Paradise</span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" ></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav ms-auto">
-             <li class="nav-item me-3">
-                 <a href="" class="nav-link d-inline-block">Home</a>
-             </li>
-             <li class="nav-item me-3 ">
-                 <a href="" class="nav-link d-inline-block">Menu</a>
-             </li>
-             <li class="nav-item me-3 ">
-                 <a href="../inventory/index.html" ><button class="btn  btn-outline-primary toMerch">Our Merch</button></button></a>
-             </li>
-         </ul>
-     </div>
- </div> 
-    </nav>
-    
+  <nav class="navbar  navbar-expand-lg navbar-light bg-light rounded pb-3 shadow-sm ">
+   <div class="container-fluid  px-1"> 
+    <span href="#" class="navbar-brand mb-0 ps-2  h1">Paradise</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav ms-auto">
+           <li class="nav-item me-3">
+               <a href="" class="nav-link d-inline-block">Home</a>
+           </li>
+           <li class="nav-item me-3 ">
+               <a href="" class="nav-link d-inline-block">Menu</a>
+           </li>
+           <li class="nav-item me-3 ">
+               <a href="{% url 'paradise:list' %}" ><button class="btn  btn-outline-primary toMerch">Our Merch</button></button></a>
+           </li>
+       </ul>
+   </div>
+</div> 
+  </nav>
+  
 <main class="first-container  rounded">
 
-        
-        
+      
+      
 <!-- intro -->
 
 <section id="intro">
 <div class="container-fluid  ">
-    <div class="intro-msg">
-     <span class="ms-3">Welcome to</span>
-     
-     <span class="brand-name  ">
-         <div></div>
-         PARADISE
-     </span>
- </div>
- 
- <div class="intro-img" style="
- ">
- 
-     
- </div>
- 
- <span class="quote ">
-     <blockquote class="text-primary" ><b>&#10077Live,Love,Laugh&#10078</b></blockquote>
-     <blockquote> Fill the happiness in what you wear.</blockquote>
- </span>          
-    <div class="center">
-<button class="toMerch  btn border fw-bold  btn-dark btn-lg-lg">Check Out Our Merch</button>
+  <div class="intro-msg">
+   <span class="ms-3">Welcome to</span>
+   
+   <span class="brand-name  ">
+       <div></div>
+       PARADISE
+   </span>
+</div>
 
-    </div>
+<div class="intro-img"></div>
+
+<span class="quote ">
+   <blockquote class="text-primary" ><b>&#10077Live,Love,Laugh&#10078</b></blockquote>
+   <blockquote> Fill the happiness in what you wear.</blockquote>
+</span>          
+  <div class="center">
+<button class="btn border fw-bold  btn-dark btn-lg-lg"><a href="#merch" class="text-light" style="text-decoration: none;">Check Out Our Merch</a></button>
+
+  </div>
 </div>
 </section>
 
@@ -64,16 +65,16 @@
 
 <section id="summary">
 <div class="container-fluid center">
- <h1 class="msg">THE YOUTH BRAND</h1>
- <h3 class="text-primary my-4"> Summary</h3>
- <p class="w-75 center mt-4 ">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas maxime quasi libero provident minus amet quisquam totam dicta natus ratione, esse deleniti delectus reiciendis exercitationem voluptatibus distinctio. Fugit, nobis.
- </p>
- 
+<h1 class="msg">THE YOUTH BRAND</h1>
+<h3 class="text-primary my-4"> Summary</h3>
+<p class="w-75 center mt-4 ">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quas maxime quasi libero provident minus amet quisquam totam dicta natus ratione, esse deleniti delectus reiciendis exercitationem voluptatibus distinctio. Fugit, nobis.
+</p>
 
- <blockquote class="text-primary  fs-5 center my-5" >&#10077 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque veniam fugiat ut debitis dicta, obcaecati quisquam excepturi, sed explicabo qui, ad rerum deleniti ducimus vel ex dolore alias perspiciatis inventore! &#10078</blockquote>
 
- 
+<blockquote class="text-primary  fs-5 center my-5" >&#10077 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque veniam fugiat ut debitis dicta, obcaecati quisquam excepturi, sed explicabo qui, ad rerum deleniti ducimus vel ex dolore alias perspiciatis inventore! &#10078</blockquote>
+
+
 </div>
 
 
@@ -83,23 +84,23 @@
 
 <section id="merch">
 <div class="container-fluid px-3 center">
- <h3 class="py-3 fs-2 bg-dark text-light">Collections</h3>
+<h3 class="py-3 fs-2 bg-dark text-light">Collections</h3>
 
- <div class="inventory">
-    <div class="mens-wears wears mb-lg-4 mb-md-2 mb-1 ">
-      <div>
-         <p class=" fw-bolder text-light">Check Out Our Mens Wears</p>
-         <button class="btn btn-outline-light border border-light border-5 "><a href="{% url 'paradise:list' %}" class="nav-link text-light" >Check It Out!</a></button>
-      </div>
-  </div>
-  <div class="womens-wears wears ">
-     <div>
-         <p class=" fw-bolder text-light">Check Out Our Womens Wears</p>
-         <button class="btn btn-outline-light  border border-light border-5  "><a href="../inventory/index.html" class="nav-link text-light">Check It Out!</a></button>
-     </div>
-         
+<div class="inventory">
+  <div class="mens-wears wears mb-lg-4 mb-md-2 mb-1 ">
+    <div>
+       <p class=" fw-bolder text-light">Check Out Our Mens Wears</p>
+       <button class="btn  border border-light border-5 "><a href="{% url 'paradise:list' %}" class="nav-link text-light" >Check It Out!</a></button>
     </div>
- </div>
+</div>
+<div class="womens-wears wears ">
+   <div>
+       <p class=" fw-bolder text-light">Check Out Our Womens Wears</p>
+       <button class="btn  border border-light border-5  "><a href="{% url 'paradise:list' %}" class="nav-link text-light">Check It Out!</a></button>
+   </div>
+       
+  </div>
+</div>
 </div>
 </section>
 
@@ -107,12 +108,12 @@
 
 <section id="collaborations">
 <div class="container-fluid center text-light bg-dark   ">
-    <p class="fs-1 fw-bolder pt-3 td-underline">Collaborations</p>
-  
-  <div class="collabs row justify-content-evenly ">
-      <div class="col-md-6  fs-3  fw-bold "><span class="border border-5 px-3 py-1">EVOLVE</span></div>
-      <div class="col-md-6 fs-3 fw-bold ">  <span class="border border-5 px-3 py-1">APHRODITE 21</span></div>
-  </div>
+  <p class="fs-1 fw-bolder pt-3 td-underline">Collaborations</p>
+
+<div class="collabs row justify-content-evenly ">
+    <div class="col-md-6  fs-3  fw-bold "><span class="border border-5 px-3 py-1">EVOLVE</span></div>
+    <div class="col-md-6 fs-3 fw-bold ">  <span class="border border-5 px-3 py-1">APHRODITE 21</span></div>
+</div>
 
 
 </div>
@@ -124,33 +125,33 @@
 
 <footer>
 <div class="container-fluid text-light bg-dark  center">
- 
- <span class="brand-name ">
-     <div></div>
-      PARADISE
-   </span>
-    
-   <div class="row">
-        <div class="contact col-md-4 ">
-          <h4>Contact us</h4>
-          <ul class="p-0">
-              <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
-              <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
-              <a href="#" class="nav-link link-light"><i class="bi bi-telephone"></i> 08034445675</a>
-              
-          </ul>
-        </div>
-        <div class="socials col-md-4 ">
-         <h4>Follow us</h4>
-         <a href="#" class="nav-link link-light"><i class="fab fa-instagram"></i> Instagram</a>
-         <a href="#" class="nav-link link-light"><i class="fab fa-twitter"></i> Twitter</a>
-          
-         </div>
-        <div class="about col-md-4">
-            <h4>About Us</h4>
-            <a href="#" class="nav-link link-light">About us</a>
-        </div>
-    </div>
+
+<span class="brand-name ">
+   <div></div>
+    PARADISE
+ </span>
+  
+ <div class="row">
+      <div class="contact col-md-4 ">
+        <h4>Contact us</h4>
+        <ul class="p-0">
+            <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+            <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+            <a href="#" class="nav-link link-light"><i class="bi bi-telephone"></i> 08034445675</a>
+            
+        </ul>
+      </div>
+      <div class="socials col-md-4 ">
+       <h4>Follow us</h4>
+       <a href="#" class="nav-link link-light"><i class="fab fa-instagram"></i> Instagram</a>
+       <a href="#" class="nav-link link-light"><i class="fab fa-twitter"></i> Twitter</a>
+        
+       </div>
+      <div class="about col-md-4">
+          <h4>About Us</h4>
+          <a href="#" class="nav-link link-light">About us</a>
+      </div>
+  </div>
 </div>
 </footer>
 
@@ -159,4 +160,8 @@
 </div>
 
 
-{%endblock%}
+  {% endblock %}
+
+  {% block js %}
+  <script src="{% static 'js/index.js' %}"></script>
+  {% endblock %}

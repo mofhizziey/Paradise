@@ -24,8 +24,11 @@ urlpatterns = [
     path('menu/', views.MenuView.as_view(), name='menu'),
     path('paradise/', include('paradise.urls')),
     path('accounts/', include('allauth.urls')),
+    path('reviews/', include('reviews.urls')),
+    path('billing_address/', include('address.urls'))
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

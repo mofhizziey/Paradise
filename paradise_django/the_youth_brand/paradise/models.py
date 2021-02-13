@@ -2,6 +2,10 @@ from django.db import models
 from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
+from address.models import BillingAddress
+
+
+
 # Create your models here.
 SIZES = (
     ('S', 'S'),
@@ -21,11 +25,23 @@ PAYMENT_CHOICES = (
     ('Paypal', 'Paypal')
 )
 
+PRODUCT_COLOR_CHOICES = (
+    ('Black', 'Paystack'),
+    ('White', 'Remita'),
+    ('Red', 'Paypal'),
+    ('Yellow', 'Paystack'),
+    ('Green', 'Remita'),
+    ('Blue', 'Paypal'),
+
+)
+
 class Product(models.Model):
 
     name = models.CharField(max_length=100, null=False)
     picture = models.FileField(upload_to='Releases')
     price = models.IntegerField()
+    color = models.CharField(max_length=100, null=True, blank=True,  choices=PRODUCT_COLOR_CHOICES)
+    details = models.CharField(max_length=100, null=True)
     size = models.CharField(max_length=100, null=False)
     uploaded_at = models.DateTimeField(auto_now_add=True)
    
@@ -50,19 +66,6 @@ class Product(models.Model):
             self.slug = slugify(f'{self.name} {self.size}')
         return super().save(*args, **kwargs)
 
-class BillingAddress(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    street_address = models.CharField(max_length=240)
-    country = models.CharField(max_length=250, default='Nigeria')
-    city = models.CharField(max_length=250)
-    state = models.CharField(max_length=240)
-    zip = models.IntegerField()
-
-    def get_absolute_url(self):
-        return reverse('paradise:checkout')
-
-    def __str__(self):
-        return self.street_address
 
 class OrderProduct(models.Model):
     # Extending the Product model to create nother model with all the product
@@ -97,26 +100,7 @@ class Order(models.Model):
     def __str__(self):
         return f'New order: {self.user} has made an order!'
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    image = models.ImageField(upload_to='Profile Pictures/')
-    firstname = models.CharField(max_length=250)
-    lastname = models.CharField(max_length=250)
-    gender = models.CharField(max_length=250, choices=GENDER)
-    slug = models.SlugField(unique=True)
-  
-    def get_absolute_url(self):
-        return reverse('paradise:profile', kwargs={'slug':self.slug})
 
 
-    def __str__(self):
-        return f'{self.user} Profile'
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(f'{self.user}')
-        return super().save(*args, **kwargs)
-
-
-   
 

@@ -1,5 +1,6 @@
 from django import forms
-from paradise.models import Product, BillingAddress
+from paradise.models import Product
+from address.models import BillingAddress
 
 class ProductViewForm(forms.ModelForm):
     class Meta:
@@ -12,15 +13,14 @@ class CheckOutForm(forms.Form):
     country = forms.CharField()
     city = forms.CharField()
     state = forms.CharField()
-    zip = forms.IntegerField()
+    zip_code = forms.IntegerField()
     same_billing_address = forms.BooleanField(widget=forms.CheckboxInput())
     save_info = forms.BooleanField(widget=forms.CheckboxInput())
     payment_option = forms.BooleanField(widget=forms.RadioSelect())
 
 class CheckOutModelForm(forms.ModelForm):
-
     class Meta:
         model = BillingAddress
-        fields = ['street_address', 'city', 'state', 'zip', 'country']
+        fields = ['street_address', 'city', 'state', 'zip_code', 'country']
         
         

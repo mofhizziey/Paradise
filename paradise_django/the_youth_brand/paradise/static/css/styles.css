@@ -1,0 +1,364 @@
+html{
+    scroll-behavior: smooth;
+}
+.overall{
+    padding: 1% 2% 2% 2%;
+    
+}
+.first-container{
+    box-shadow: 0px 2px 25px rgba(104, 98, 98, 0.486);
+}
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*navigation*/
+
+nav.navbar{
+  display: block;
+}
+
+/*intro*/
+
+#intro{
+    height: 100vh;
+    padding: 3% 0% 2% 6%;
+    z-index: 2;
+    background-color: rgb(241, 240, 237); 
+}
+#intro .container-fluid{
+    padding: 1% 0% 0% 1%;
+    border-left: 6px solid rgba(17, 17, 17, 0.685);
+    position: relative;
+    overflow: hidden;
+}
+#intro .container-fluid span{
+    font-size: 1.8em;
+    display: block;
+}
+#intro .container-fluid .brand-name {
+    font-size: 8em;
+    margin: 3% 0% 0% 3%;
+    font-weight: lighter;
+    color: rgb(53, 50, 50);
+    display: inline-block;
+    position: relative;
+    
+}
+#intro .container-fluid  .btn{
+  padding:2%;
+  width: 17rem;
+  font-size: 1.3em;
+  margin-top: 4%;
+  position: relative;
+  
+}
+#intro .container-fluid .brand-name div{
+   border-radius: 20px 20px 5px 5px ;
+   position: absolute;
+  width: 100% ;
+  height: 80px ;
+  background-color: #4987FC;
+  bottom: 0;
+  z-index: -1;
+}
+
+#intro .container-fluid span.quote{
+    padding: 5% 3% 0% 0%;
+    font-size: 1.5em;
+    display: block;
+   margin-left: 1%;
+    text-align: left;
+    position: relative;
+  
+    
+}
+#intro .container-fluid .intro-msg{
+    display: inline-block;
+}
+#intro .container-fluid .intro-img{
+  width: 500px;
+  height: 300px;
+  background: url('{% static "paradise-images/feyi.jpg" %}') 0% 70% no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -18%;
+  top: 10%;
+  border-radius: 150px 0px 0px 150px;
+ 
+ 
+}
+/*#intro .container-fluid .intro-img::before{
+    content: " ";
+    width: 500px;
+    height: 300px;
+    background: url('paradise-images/IMG-20210103-WA0063.jpg') top left no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -4%;
+    top: 8%;
+    border-radius: 150px 0px 0px 150px;  
+    filter: blur(20px);
+    z-index: -1;
+
+}*/
+
+/*summary*/
+
+#summary .container-fluid{
+    padding: 4% 2% ;
+    background: rgb(219, 223, 247);
+}
+#summary .container-fluid .row div{
+    width: 25rem;
+    height: 20rem;
+    background-color: cadetblue;
+    margin: 5% 0% 10% 0%;
+    position: relative;
+}
+#summary .container-fluid blockquote{
+    width: 50%;
+}
+
+
+
+/*Collaborations*/
+
+#collaborations .container-fluid{
+   margin-top: 10% ;
+   
+ }
+#collaborations .container-fluid .collabs div{
+    margin: 4% 0%;
+}
+
+
+/*Merch*/
+
+#merch .container-fluid{
+     margin-top: 3%;
+}
+#merch .container-fluid .inventory .wears{
+  text-align: left;
+  height: 50vh;
+  padding: 3%;
+}
+#merch .container-fluid .inventory .wears:hover{
+    background-size: 110%;
+    transition: all 0.3s ease-in-out;
+}
+#merch .container-fluid .inventory .wears div{
+    background: rgba(26, 21, 21, 0.466);
+    display: inline-block;
+    padding: 2%;
+    margin-top: 3%;
+    font-size: 2.3em;
+}
+#merch .container-fluid .inventory .wears div .btn{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+#merch .container-fluid .inventory .mens-wears{
+background: url('paradise-images/IMG-20210103-WA0063.jpg')30% 30% no-repeat;
+background-size: 100%;
+
+}
+#merch .container-fluid .inventory .womens-wears{
+    background: url('paradise-images/IMG-20210103-WA0064.jpg')30% 30% no-repeat;
+    background-size: 100%;
+}
+
+/*footer*/
+
+ 
+footer .container-fluid{
+    padding: 0% 0% 4% 2%;
+
+}
+footer .nav-link{
+  padding: .5rem 0rem;
+}
+footer h4{
+    text-decoration: underline;
+}
+footer .brand-name{
+    font-size: 4em;
+    font-weight: lighter;
+    color: rgb(255, 253, 253);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4%;
+}
+footer .brand-name div{
+    border-radius: 20px 20px 5px 5px ;
+    position: absolute;
+   width: 100% ;
+   height: 43px ;
+   background-color: #4987FC;
+    bottom: 0;
+   z-index: -1;
+}
+footer .row{
+    text-align: left;
+}
+
+/*media queries*/
+
+@media(max-width:1024px){
+    #intro .container-fluid .brand-name{
+        font-size: 6em;
+        
+    }
+    #intro .container-fluid .intro-img{
+        width: 400px ;
+        height: 250px;
+    }
+    #intro .container-fluid span.quote{
+        padding-top: 14%;
+        margin: 0px;
+        font-size: 1.3em;
+    }
+    #intro .container-fluid .brand-name div{
+       height: 60px ;
+       
+     }
+}
+
+@media(max-width:768px){
+    nav.navbar a.nav-link,nav.navbar .btn{
+        margin-left: 10px;
+    }
+    #intro .container-fluid{
+        height: 100%;
+        padding: 5% 0% 3% 3%;
+    }
+    #intro .container-fluid .brand-name{
+        font-size: 4em;
+        
+    }
+    #intro .container-fluid span.ms-3{
+          font-size: 1.5em;
+    }
+    #intro .container-fluid .intro-img{
+            width: 300px ;
+     
+            height: 200px;
+    }
+    #intro .container-fluid .brand-name div{
+       height: 40px ;
+       
+     }
+     #intro .btn{
+        
+         top: 4rem;
+     }
+    #intro .container-fluid span.quote{
+       font-size: 1.2em;
+    }
+    #summary .container-fluid blockquote{
+        width: 80%;
+    }
+}
+
+@media(max-width:425px){
+    #intro{
+        padding: 10% 0% 3% 0%;
+        height: 95vh;
+    }
+    #intro .container-fluid{
+        height: 100%;
+        padding: 5% 0% 5% 0%;
+        border-left: 4px solid rgba(17, 17, 17, 0.685);
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    #intro .container-fluid .brand-name{
+        font-size: 3.5em;
+    }
+    .ms-3{
+        margin-left: 0px!important;
+    }
+    #intro .container-fluid span.ms-3{
+          font-size: 1.3em;
+         
+        
+    }
+    #intro .container-fluid .intro-img{
+        position: relative;
+        width: 80%;
+        height: 150px;
+        border-radius: 0px;
+        background-size: 100%;
+        right: 0;
+        top: 0; 
+        margin: 10% auto 0 auto;     
+        background-position: 10% 20% ;
+    }
+    #intro .container-fluid .brand-name div{
+       height: 40px ;
+       
+     }
+     #intro .container-fluid  .btn{
+       width: 13rem;
+       font-size: 1em;
+       padding:2% 3%;
+       top: 0rem;
+     }
+    #intro .container-fluid span.quote{
+        padding-top: 10%;
+        line-height: 10px;
+        font-size: 1em;
+        text-align: center;
+        margin-top: 10%;
+    }
+    #summary .container-fluid blockquote{
+        width: 100%;
+    }
+    #merch .container-fluid .inventory .wears div{
+        background: rgba(26, 21, 21, 0.466);
+        display: inline-block;
+        padding: 3%;
+        margin-top: 3%;
+        font-size: 1.3em;
+        text-align: center; 
+        
+    }
+    
+    #merch .container-fluid .inventory .wears{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    #merch .container-fluid .inventory .wears div .btn{
+        font-size: 0.9em;
+    }
+    footer .brand-name{
+        font-size: 2em;
+        margin-top: 4%;
+    }
+    footer .brand-name div{
+        height: 25px;
+    }
+    footer .row{
+        font-size: 0.8;
+        margin: 2% 0% 3% 1%;
+    }
+
+
+}
+@media(min-height:740px) and (max-width:425px){
+    #intro .container-fluid span.quote{
+        margin: 3% 0% 10% 0%;
+    } 
+    #merch .container-fluid .inventory .wears{
+        height: 35vh;
+    }  
+   #intro{
+       height: 70vh;
+       padding-top: 5%;
+   }
+}
