@@ -181,8 +181,13 @@ border-right: 2px solid rgba(128, 128, 128, 0.445);
     font-size: 2rem;
     font-weight: 200;
 }
-.cta .grid .product-colors div{
-  display: inline-block;
+.cta .grid .product-colors .colors{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+.cta .grid .product-colors .colors div{
+   display: flex;
+ place-items: center center;
   width: 2rem;
   height: 2rem;
   margin: 0rem .5rem 0rem 0rem;
@@ -190,7 +195,9 @@ border-right: 2px solid rgba(128, 128, 128, 0.445);
   border: 2px solid rgb(160, 156, 156);
   cursor: pointer;
 }
-
+.cta .grid .product-colors .colors div .tick.hidden{
+  display: none;
+}
 .cta .grid .product-sizes div{
     color: rgb(4, 1, 22);
     margin:  .5rem .5rem .5rem 0rem;

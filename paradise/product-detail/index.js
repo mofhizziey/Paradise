@@ -1,6 +1,40 @@
+let start=performance.now()
+/**carousel */
+
+$('document').ready(()=>{
+    $('.suggestions .container-fluid .carousel').slick({
+    infinite:false,
+    autoplay:false,
+    autoplaySpeed:3000,
+    dots:true,
+    speed:1000,
+    slidesToShow:4,
+    slidesToScroll:2,
+    variableWidth: true,
+    centerMode:false,
+    nextArrow:'.next-arr',
+    prevArrow:'.prev-arr', 
+    
+    
+      responsive:[
+         {
+             breakpoint:480,
+             settings:{
+                 slidesToShow:1,
+                 slidesToScroll:1,
+                 variableWidth:true,
+                 
+             }
+         }   
+           
+         
+      ]
+     
+    })
+})
+
 /**product detail content toggle */
 
-let start=performance.now()
 
 $('.section4 .details .detail-content').slideUp()
 
@@ -35,39 +69,24 @@ sizeGroups.forEach((size)=>{
     size.addEventListener('click',changeSize)
 })
 
-/**suggestions carousel */
+/**product colors selctor */
 
-$('document').ready(()=>{
-    $('.suggestions .container-fluid .carousel').slick({
-    infinite:false,
-    autoplay:false,
-    autoplaySpeed:3000,
-    dots:true,
-    speed:1000,
-    slidesToShow:4,
-    slidesToScroll:2,
-    variableWidth: true,
-    centerMode:false,
-    nextArrow:'.next-arr',
-    prevArrow:'.prev-arr', 
-    
-    
-      responsive:[
-         {
-             breakpoint:480,
-             settings:{
-                 slidesToShow:1,
-                 slidesToScroll:1,
-                 variableWidth:true,
-                 
-             }
-         }   
-           
-         
-      ]
-     
-    })
-})
+let productColors = document.querySelectorAll('.product-colors .colors div')
+ 
+let changeColor=(e)=>{
+    e.stopPropagation()
+  let tick = e.target.firstElementChild 
+  
+  if(tick){
+    tick.classList.toggle('hidden')
+    e.target.classList.toggle('ticked')
+  }else{
+      e.target.classList.toggle('hidden')
+      e.target.parentElement.classList.toggle('ticked')
+  }
+}
+
+productColors.forEach((color)=>{color.addEventListener('click',changeColor)})
 
 let end = performance.now()
 
