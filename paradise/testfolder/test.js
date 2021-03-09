@@ -17,3 +17,5 @@ anim.to('.animation  div',{
     color:'white',
     stagger:0.3
 },'-=1')
+
+

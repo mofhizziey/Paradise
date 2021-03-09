@@ -1,0 +1,445 @@
+/*fonts*/
+@font-face {
+    font-family: 'pacifico';
+    font-style: normal;
+    src:url('fonts/Pacifico/Pacifico-Regular.ttf')
+}
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    src:url('fonts/Caveat/Caveat-VariableFont_wght.ttf')
+}
+@font-face {
+    font-family: 'lobster';
+    font-style: normal;
+    src:url('fonts/Lobster/Lobster-Regular.ttf')
+}
+@font-face {
+    font-family: 'sofia';
+    font-style: normal;
+    src:url('fonts/Sofia/Sofia-Regular.ttf')
+}
+.sofia{
+    font-family: 'sofia';
+    font-weight: 700;
+}
+.pacifico{
+    font-family: 'pacifico';
+}
+.caveat{
+    font-family: 'Caveat';
+    font-weight: 900;
+}
+.lobster{
+    font-family: 'lobster';
+}
+html{
+    scroll-behavior: smooth;
+}
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+.fl-right{
+    float: right;
+}
+.navbar-expand{
+    flex-wrap: wrap;
+}
+ /*custom scroll bars*/
+
+body::-webkit-scrollbar{
+    width: 15px;
+    background-color: rgb(223, 217, 223);
+    scrollbar-width: 11px;
+}
+body::-webkit-scrollbar-thumb{
+    
+    background-color: #4987FC;
+    border-radius: 10px;
+    border: 3px solid rgb(223, 217, 223) ;
+       
+}
+.counter button{
+    border: none;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    line-height:.1rem;
+    border-radius: 2rem;
+}
+.counter button:focus{
+    outline: thin;
+}
+.counter .value{
+    margin: 0rem .3rem;
+    font-size: 1.3rem;
+}
+
+/*navigation*/
+
+#nav.navbar{
+    margin-bottom: 2%;
+    z-index: 3;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    box-shadow:  0px 5px 30px -20px rgba(21, 19, 48, 0.425);
+    opacity: 0.9;
+} 
+ 
+.navbar-brand{
+    font-size: 1.5em;
+}
+.nav-item{
+   padding: 0rem 2rem 0rem 2rem;
+   font-weight: 600;
+   font-size: 1em;
+}
+.nav-item i.bi{
+    font-size: 1.1em;
+   
+}
+.saved{
+    color: lightcoral;
+}
+
+
+/*save and cart banner counts*/
+.saved,.cart{
+    position: relative;
+}
+span.count{
+    position: absolute;
+    border-radius: 10px;
+    font-size: 0.8em;
+    top: 5px;
+    right: -10px;
+}
+
+
+/*main container*/
+
+main.container-fluid{
+   position: relative;
+
+}
+
+
+/*item containers*/
+
+#items.container-fluid{
+   margin: 0px;    
+}
+#items.container-fluid h3{
+    margin: 1.5rem 0rem 3rem 0rem;
+    text-decoration: underline 3px rgb(198, 198, 199) ;
+}
+
+.item{
+    width: 70%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+.item .total-price{
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.item .total-price .total{
+    font-size: 1.2em;
+    color: #4987FC;
+    font-weight: 700;
+}
+.item .card-body .quantity input{
+    width: 6rem;
+}
+
+/*cards*/
+
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+}
+.card .card-img-top{
+    margin: .5rem 1.5rem;
+    width: 10rem;
+    height: 10rem;
+
+}
+.card .card-body .description .product-name{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.card .card-body .description p{
+    border-top:1px solid rgb(202, 198, 198) ;
+    padding-top: .5rem;
+}
+.card .card-img-top img{
+    height: 100%;
+}
+.card .card-body{
+    position: relative;
+}
+
+.card .card-body .quantity{
+ text-align: center;
+}
+.card .card-body > div:not(:last-child){
+    border-right: 1px solid rgb(175, 175, 175);
+    padding: 0rem .5rem;
+}
+.card .card-body > div > div{
+    padding-top: 1rem;
+}
+.card .card-body .unit-price{
+    text-align: center;
+}
+.card .card-body .unit-price div{
+    font-size: 1.1em;
+    font-weight: 600; 
+    color: rgb(75, 73, 73);
+}
+
+.card .card-footer .btn{
+    width: 100%;
+}
+.card .close{
+    font-size: 1rem;
+    position: absolute;
+    right: .5rem;
+    color: rgb(20, 20, 20);
+    cursor: pointer;
+}
+.card .close:hover{
+    color: rgb(192, 11, 11);
+    transition: .2s all ease-in;
+}
+
+/*checkout section*/
+
+#checkout{
+  background: rgb(23, 25, 36);
+  color: white;
+  margin-bottom: 5rem;
+}
+#checkout .container-fluid{
+    padding: 2rem 1rem;
+}
+#checkout .container-fluid .btn{
+    font-weight: 500;
+    margin-right: 1rem;
+}
+#checkout .container-fluid a{
+    text-decoration: none;
+}
+#checkout .container-fluid .total-price{
+    font-size: 1.3em;
+}
+
+
+/*suggestions*/
+
+.suggestions .container-fluid{
+    padding-top: 1%;
+      width:99%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .suggestions .container-fluid .sectionHeader{
+        margin: 5% 0%;
+        text-transform: capitalize;
+        text-decoration: overline;
+    }
+    .suggestions .carousel{
+        position: relative;
+    }
+    
+   .suggestions .card{
+        width: 18rem;
+        border: none;
+        margin: 0px 10px ; 
+               
+    }
+    .suggestions .card:hover{
+        transform: scale(1.03);
+        transition: all 0.3s ease-out;
+    }
+    .suggestions .card-img-top{
+        margin: 0 auto;
+        height: 12rem;
+        width: 12rem;
+        
+    }
+    .suggestions .card-body{
+        padding: 1% 1% 0% 3%;
+        margin-top: 5%;
+        position: relative;
+    }
+    .suggestions .card-body .product-name{
+        font-size: 1rem;
+    }
+    .suggestions .add-to-cart{
+      margin-bottom: 2%;
+      cursor: pointer;
+        width: 40%;
+        text-align: right;
+    }
+    .suggestions .add-to-cart:hover{
+        color: #4c80f1;
+    }
+    .save{
+        cursor: pointer;
+        margin-top: 2%;
+    }
+    
+    /*custom arrows*/
+    .prev-arr,.next-arr{
+        display: inline-block;
+        height: 100%;
+        z-index: 5;
+    }
+    .prev-arr{
+        position: absolute;
+        top: 50%;
+        left: 2%;
+    }
+    .prev-arr:hover{
+        color: rgb(170, 167, 167);
+        cursor: pointer;
+    }
+    .next-arr{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+    }
+    .next-arr:hover{
+        color: rgb(170, 167, 167);
+        cursor: pointer;
+    }
+    
+
+
+
+/*footer*/
+
+ 
+footer .container-fluid{
+    padding: 0% 0% 4% 2%;
+    margin-top: 10%;
+
+}
+footer .nav-link{
+  padding: .5rem 0rem;
+}
+footer h4{
+    text-decoration: underline;
+}
+
+footer .brand-name{
+    font-size: 4em;
+    font-weight: lighter;
+    color: rgb(255, 253, 253);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4%;
+}
+footer .brand-name div{
+    border-radius: 20px 20px 5px 5px ;
+    position: absolute;
+   width: 100% ;
+   height: 43px ;
+   background-color: #4987FC;
+    bottom: 0;
+   z-index: -1;
+}
+footer .row{
+    text-align: left;
+    padding: 0px;
+}
+
+@media(max-width:1027px){
+    .item{
+        width: 90%;
+    }
+}
+@media(max-width:768px){
+    .card .card-body > div.description{
+        border-right: none;
+        margin-bottom: .5rem;
+    }
+    .card .card-body h5{
+        font-size: 1em;
+    }
+    .card .card-body > div > div{
+        padding-top: .5rem;
+    }
+}
+@media(max-width:468px){
+    footer{
+        font-size: 1em;
+    }
+    #item.container-fluid h3{
+        margin: 1rem;  
+    }
+    .nav-item{
+        padding: 0rem .7rem 0rem .7rem;
+        font-weight: 600;
+        font-size: .8em;
+    }
+    .item .total-price .total {
+        font-size: 1em;
+    }
+    .card{
+     
+        flex-wrap: wrap;
+    }
+    .card .card-img-top{
+        flex: 0 0 auto;
+        height: 10rem;
+        width: 10rem;
+        margin: 1rem auto;
+        text-align: center;
+
+    }
+    .card .card-body{
+        flex: 0 0 auto;
+        width: 100%;
+        
+    }
+    .card .card-body > div:not(:first-child){
+        width: 50%;
+    }
+    .card .card-body .description .product-name{
+        font-size: 1em;
+    }
+    #checkout .container-fluid .total-price {
+       font-size: 1.1em;
+    }
+    #checkout .container-fluid .btn{
+     margin: 10px 5px;
+     font-size: .8em;
+    }
+}
+@media(max-width:375px){
+    .card .card-body .description p{
+        font-size: .8em;
+    }
+    .card .card-img-top{
+        width: 8rem;
+        height: 8rem;
+    }
+}
+@media(max-width:320px){
+    .card .card-body  .quantity .counter button{
+        width: 1.5rem;
+        height:1.5rem ;
+       font-size: 1.4rem;
+        
+    }
+    .counter .value{
+        font-size: 1.3rem;
+    }
+}

@@ -66,6 +66,9 @@ html{
     overflow-x: hidden;
     transition: all 0.5s linear;
 }
+.category-sidebar.container-fluid::-webkit-scrollbar{
+    display: none;
+}
 .category-sidebar.container-fluid .list-group-item{
     background: none;
     border: 1px solid ;
