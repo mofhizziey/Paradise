@@ -2,6 +2,7 @@
 {% load static %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/product.css' %}">
+    <style></style>
 {% endblock %}
 
 {% block content %}
@@ -74,8 +75,8 @@
                       <img src="{{product.picture.url}}" alt="" class="card-img-top d-block ">
                       <div class="card-body row ">
                         <span class="product-name fw-bold  col-8 card-title">{{product.name}}</span>
-                        <span class="price col-4 fw-bold text-primary center">${{product.price}}</span>
-                        <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                        <span class="price col-4 fw-bold text-primary center">${{product.price}}</span> 
+                        <span class="extra-info col-12 card-subtitle text-muted">{{product.color}}, 100%</span>
                         <i class="bi bi-heart fs-4 save col-6 "></i> 
                         <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
                        <a href="{{product.get_absolute_url}}" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
@@ -161,161 +162,7 @@
                   
                   </div>
               </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-              <div class="card shadow rounded ">
-                  <img src="products/women-hoodie.png" alt="" class="card-img-top d-block ">
-                  <div class="card-body row ">
-                    <span class="product-name fw-bold   col-8 card-title">Womens Crop swearshirt </span>
-                    <span class="price col-4 fw-bold text-primary center">$100</span>
-                    <span class="extra-info col-12 card-subtitle text-muted">Blue, 100% cotton </span>
-                    <i class="bi bi-heart fs-4 save col-6 "></i> 
-                    <span class="add-to-cart center col-6 f "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
-                    <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
-                  
-                   
-                  
-                  </div>
-              </div>
-                
+
              
               </div>
             </div>

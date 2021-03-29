@@ -26,12 +26,12 @@ PAYMENT_CHOICES = (
 )
 
 PRODUCT_COLOR_CHOICES = (
-    ('Black', 'Paystack'),
-    ('White', 'Remita'),
-    ('Red', 'Paypal'),
-    ('Yellow', 'Paystack'),
-    ('Green', 'Remita'),
-    ('Blue', 'Paypal'),
+    ('Black', 'Black'),
+    ('White', 'White'),
+    ('Red', 'Red'),
+    ('Yellow', 'Yellow'),
+    ('Green', 'Green'),
+    ('Blue', 'Blue'),
 
 )
 
@@ -69,6 +69,7 @@ class Product(models.Model):
 
 class OrderProduct(models.Model):
     # Extending the Product model to create nother model with all the product
+    
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=True, default=1)
     ordered = models.BooleanField(default=False)

@@ -79,9 +79,7 @@ function scrollTO(triggers,target){
            })
         })
     })
- }*/
- 
-
+ }*/ 
 })
 
 window.onload=()=>{console.log('loaded')}
