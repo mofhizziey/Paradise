@@ -44,7 +44,7 @@ class Product(models.Model):
     details = models.CharField(max_length=100, null=True)
     size = models.CharField(max_length=100, null=False)
     uploaded_at = models.DateTimeField(auto_now_add=True)
-   
+
     slug = models.SlugField(null=False, unique=True)
 
     def get_absolute_url(self):
@@ -55,8 +55,6 @@ class Product(models.Model):
 
     def get_remove_from_cart_url(self):
         return reverse('paradise:remove-from-cart', kwargs={'slug':self.slug})
-
-        
 
     def __str__(self):
         return f'{self.name}'
@@ -69,7 +67,7 @@ class Product(models.Model):
 
 class OrderProduct(models.Model):
     # Extending the Product model to create nother model with all the product
-    
+
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=True, default=1)
     ordered = models.BooleanField(default=False)
@@ -100,8 +98,3 @@ class Order(models.Model):
 
     def __str__(self):
         return f'New order: {self.user} has made an order!'
-
-
-
-
-
