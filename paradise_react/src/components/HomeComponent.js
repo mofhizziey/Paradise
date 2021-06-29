@@ -1,28 +1,32 @@
-import '../resources/gsap-public/src/'
-
-import { useForm } from "react-hook-form";
+import '../resources/gsap-public/src/';
+import '../resources/bootstrap/css/bootstrap.min.css';
 import '../static/home.css';
+import NavBar from './NavBar';
 
 
 
-function HomeComponent(){
+function HomeComponent(){ 
+
+    const textDec = {
+        textDecoration: 'none'
+    }
+
+
     return(
   
      <div className="overall">
-  
-    <a href="#" class="link whatsapp-icon"><i class="fab text-light fa-whatsapp "></i></a>
+         <NavBar />
+    <a href="#" className="link whatsapp-icon"><i class="fab text-light fa-whatsapp "></i></a>
 
 
 
-<main className="first-container  rounded">
-
-    
+<main className="first-container  rounded"> 
 <section id="intro">
  <div className="container-fluid  ">
      <div className="intro-msg">
       <span className="ms-3">Welcome to</span>
       
-      <span className="brand-name  ">
+      <span className="brand-name">
           <div></div>
           PARADISE
       </span>
@@ -35,7 +39,7 @@ function HomeComponent(){
       <blockquote> Fill the happiness in what you wear.</blockquote>
   </span>          
      <div className="center">
-<button className="btn border fw-bold  btn-dark btn-lg-lg"><a href="#merch" className="text-light" style="text-decoration: none;">Check Out Our Merch</a></button>
+<button className="btn border fw-bold  btn-dark btn-lg-lg"><a href="#merch" className="text-light" style={textDec}>Check Out Our Merch</a></button>
 
      </div>
 </div>
@@ -150,6 +154,7 @@ function HomeComponent(){
 </footer>
 
 </main>
+
 
 </div>
 

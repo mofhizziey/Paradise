@@ -119,7 +119,7 @@ nav.navbar{
 #intro .container-fluid .intro-img{
   width: 500px;
   height: 300px;
-  background: url('paradise-images/IMG-20210103-WA0061.jpg') 0% 70% no-repeat;
+  background: url('../resources/images/IMG-20210103-WA0061.jpg') 0% 70% no-repeat;
   background-size: contain;
   position: absolute;
   right: -18%;
@@ -202,12 +202,12 @@ nav.navbar{
     font-weight: bold;
 }
 #merch .container-fluid .inventory .mens-wears{
-background: url('paradise-images/IMG-20210103-WA0063.jpg')30% 30% no-repeat;
+background: url('../resources/images/IMG-20210103-WA0061.jpg')30% 30% no-repeat;
 background-size: 100%;
 
 }
 #merch .container-fluid .inventory .womens-wears{
-    background: url('paradise-images/IMG-20210103-WA0064.jpg')30% 30% no-repeat;
+    background: url('../resources/images/IMG-20210103-WA0061.jpg')30% 30% no-repeat;
     background-size: 100%;
 }
 
