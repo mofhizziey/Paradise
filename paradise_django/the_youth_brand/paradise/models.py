@@ -66,7 +66,7 @@ class Product(models.Model):
 
 
 class OrderProduct(models.Model):
-    # Extending the Product model to create nother model with all the product
+    # Extending the Product model to create another model with all the product
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=True, default=1)
