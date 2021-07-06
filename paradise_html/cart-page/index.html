@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../dependencies/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dependencies/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../dependencies/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../dependencies/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="../dependencies/fontawesome-free-5.13.1-web/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <!-- NAVIGATION -->
+  
+    <nav id="nav" class="navbar  navbar-expand navbar-light bg-light" >
+        
+        <h1 href="#" class="navbar-brand mb-0 ps-2 sofia d-block center" >Paradise</h1>
+      
+        
+        <div class="container-fluid  px-1"> 
+             
+             
+              <ul class="navbar-nav   center ">    
+                <ul class="save-n-cart rounded navbar-nav "> 
+                
+                <li class="nav-item "> 
+                    <a href="" class="d-inline-block cart text-primary nav-link" ><span class="count">0</span><i class="bi bi-cart  "></i> Cart</a>
+                 </li>  
+                 <li class="nav-item ">   
+                  <a href="" class="d-inline-block saved text-danger nav-link" ><span class="count ">0</span><i class="bi bi-heart  "></i> Saved</a>
+                 </li>
+               </ul>
+                
+                <li class="nav-item ">
+                    <a href="../homepage/index.html" class="nav-link d-inline-block"><i class="bi bi-house "></i> Home</a>
+                </li>
+                <li class="nav-item  ">
+                     <a href="" class="nav-link d-inline-block"><i class="bi bi-sliders "></i> Menu</a>
+                </li>
+                </ul>
+            
+          </div> 
+           </nav> 
+
+ <main class="container-fluid">          
+
+<section id="items" class="container-fluid">         
+    <h3 class=" ps-2 center">Order Summary</h3>
+
+
+<div class="item item1">
+ <div class="card " >
+        
+    <div class="card-img-top">
+         <img src="products/hoodie.png" alt="">
+    </div>
+     <div class="card-body row">
+        <div class="description col-lg-5 col-md-12">
+            <h5 class="text-muted">Description</h4>
+                <div>
+                    <span class="product-name">Product Name</span>
+                <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat.
+                </p>
+                </div>
+        </div>
+
+        <div class="quantity col-lg-3  col-sm-6">
+               <h5 class="text-muted">Quantity</h5>
+                <div class="counter" data-item="item1"> 
+                          <button class="subtract">-</button>
+                          <span class="value">1</span>
+                          <button class="add">+</button>
+                </div>
+        </div>
+
+        <div class="unit-price col-lg-3 col-sm-6">
+               <h5 class="text-muted">Unit Price</h5>
+               <div>
+                 $<span class="value">40</span>
+               </div>
+        </div>
+       
+     </div>
+  </div>
+
+  <div class="total-price">
+   
+    <span class="total ">Sub-Total: $<span class="value">40</span></span>
+ 
+    <div class="in-store fl-right">
+        <span>In-store: <span class="value" data-item="item1">10</span></span>
+    </div>
+    
+</div>
+
+
+</div>
+<div class="item item2">
+ <div class="card " >
+        
+    <div class="card-img-top">
+         <img src="products/women-hoodie.png" alt="">
+    </div>
+     <div class="card-body row">
+        <div class="description col-lg-6 col-md-12">
+            <h5 class="text-muted">Description</h4>
+                <div>
+                    <span class="product-name">Product Name</span>
+                <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat.
+                </p>
+                </div>
+        </div>
+        <div class="quantity col-lg-3  col-sm-6">
+               <h5 class="text-muted">Quantity</h5>
+               <div class="counter" data-item="item2"> 
+                <button class="subtract">-</button>
+                <span class="value">1</span>
+                <button class="add">+</button>
+      </div>
+        </div>
+        <div class="unit-price col-lg-3 col-sm-6">
+               <h5 class="text-muted">Unit Price</h5>
+               <div>
+                 $<span class="value">20</span>
+               </div>
+        </div>
+       
+     </div>
+  </div>
+
+  <div class="total-price">
+   
+    <span class="total ">Sub-Total: $<span class="value">30</span></span>
+ 
+    <div class="in-store fl-right">
+        <span>In-store: <span class="value" data-item="item2">20</span></span>
+    </div>
+    
+</div>
+
+
+</div>
+<div class="item item3">
+ <div class="card " >
+        
+    <div class="card-img-top">
+         <img src="products/t-shirt.png" alt="">
+    </div>
+     <div class="card-body row">
+        <div class="description col-lg-5 col-md-12">
+            <h5 class="text-muted">Description</h4>
+                <div>
+                    <span class="product-name">Product Name</span>
+                <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat.
+                </p>
+                </div>
+        </div>
+        <div class="quantity col-lg-3 col-sm-6">
+               <h5 class="text-muted ">Quantity</h5>
+        <div class="counter " data-item="item3">          
+            <button class="subtract">-</button>
+            <span class="value">1</span>
+            <button class="add">+</button>
+      </div>
+        </div>
+        <div class="unit-price col-lg-3 col-sm-6">
+               <h5 class="text-muted">Unit Price</h5>
+               <div>
+                 $<span class="value">15</span>
+               </div>
+        </div>
+       
+     </div>
+  </div>
+
+  <div class="total-price">
+   
+    <span class="total ">Sub-Total: $<span class="value">15</span></span>
+ 
+    <div class="in-store fl-right">
+        <span>In-store: <span class="value" data-item="item3">15</span></span>
+    </div>
+    
+</div>
+
+
+</div>
+
+
+</section>
+
+ <!--   checkout section -->
+
+  <section id="checkout" class=" ">
+      
+
+       <div class="container-fluid ">
+           <div class="total-price">
+               <p>Order Total: $ <span class="value fw-bold" ></span></p>
+           </div> 
+          <div class="cta  ">
+           <button class="btn btn-light border border-ligh"><a href="#" class="link-dark">Proceed To Checkout</a></button>
+           <button class="btn btn-dark"><a href="#" class="link-light">Continue Shopping</a></button>
+          </div>
+        </div>
+
+  </section>
+
+
+  <section class="suggestions mt-5">
+    <div class="container-fluid">
+
+        <h3 class="sectionHeader center " >You may also like...</h3>
+
+        <div class="carousel ">
+          
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+            <div class="card shadow rounded ">
+                <img src="products/hoodie.png" alt="" class="card-img-top d-block ">
+                <div class="card-body row ">
+                  <span class="product-name fw-bold  col-8 card-title">Danami Hoodie</span>
+                  <span class="price col-4 fw-bold text-primary center">$100</span>
+                  <span class="extra-info col-12 card-subtitle text-muted">Black, 100% cotton </span>
+                  <i class="bi bi-heart fs-4 save col-6 "></i> 
+                  <span class="add-to-cart center col-6 "><i class="bi bi-plus fs-3"></i><i class="bi bi-cart fs-3"></i></span> 
+                 <a href="" class="p-0 center  "><button class="btn btn-dark col-11  btn-sm   fw-bold">See More</button></a> 
+              
+                 
+                </div>
+            </div>
+     
+        
+ 
+        </div>
+
+        <div class="prev-arr"> 
+            <span><i class="fas fa-chevron-left fa-2x "></i></span>
+          </div>    
+      
+          <div class="next-arr">
+            <span><i class="fas fa-chevron-right fa-2x "></i></span>
+          </div>
+    </div>
+ 
+    
+</section>
+
+
+
+ </main>
+
+
+
+
+            footer 
+
+  <footer>
+    <div class="container-fluid text-light bg-dark  center">
+     
+     <span class="brand-name sofia fw-bold">
+         <div></div>
+          Paradise
+       </span>
+        
+       <div class="row w-75">
+            <div class="contact col-md-4">
+              <h4>Contact us</h4>
+              <ul class="p-0">
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="fab fa-whatsapp"></i> 08034445675</a>
+                  <a href="#" class="nav-link link-light"><i class="bi bi-telephone"></i> 08034445675</a>
+                  
+              </ul>
+            </div>
+            <div class="socials col-md-4 ">
+             <h4>Follow us</h4>
+             <a href="#" class="nav-link link-light"><i class="fab fa-instagram"></i> Instagram</a>
+             <a href="#" class="nav-link link-light"><i class="fab fa-twitter"></i> Twitter</a>
+              
+             </div>
+            <div class="about col-md-4">
+                <h4>About Us</h4>
+                <a href="#" class="nav-link link-light">About us</a>
+            </div>
+        </div>
+    </div>
+</footer> 
+
+
+    <script src="../dependencies/bootstrap-5/js/bootstrap.min.js"></script>
+    <script src="../dependencies/Jquery/jquery-3.5.1.min.js"></script>
+    <script src="../dependencies/gsap-public/minified/gsap.min.js"></script>
+    <script src="../dependencies/gsap-public/minified/ScrollToPlugin.min.js"></script>
+    <script src="../dependencies/fontawesome-free-5.13.1-web/js/all.min.js"></script>
+    <script src="../dependencies/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

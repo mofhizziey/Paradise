@@ -1,0 +1,684 @@
+/*fonts*/
+@font-face {
+    font-family: 'pacifico';
+    font-style: normal;
+    src:url('fonts/Pacifico/Pacifico-Regular.ttf')
+}
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    src:url('fonts/Caveat/Caveat-VariableFont_wght.ttf')
+}
+@font-face {
+    font-family: 'lobster';
+    font-style: normal;
+    src:url('fonts/Lobster/Lobster-Regular.ttf')
+}
+@font-face {
+    font-family: 'sofia';
+    font-style: normal;
+    src:url('fonts/Sofia/Sofia-Regular.ttf')
+}
+.sofia{
+    font-family: 'sofia';
+    font-weight: 700;
+}
+.pacifico{
+    font-family: 'pacifico';
+}
+.caveat{
+    font-family: 'Caveat';
+    font-weight: 900;
+}
+.lobster{
+    font-family: 'lobster';
+}
+html{
+    scroll-behavior: smooth;
+}
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+.navbar-expand{
+    flex-wrap: wrap;
+}
+ /*custom scroll bars*/
+
+body::-webkit-scrollbar{
+    width: 15px;
+    background-color: rgb(223, 217, 223);
+    scrollbar-width: 11px;
+}
+body::-webkit-scrollbar-thumb{
+    
+    background-color: #4987FC;
+    border-radius: 10px;
+    border: 3px solid rgb(223, 217, 223) ;
+       
+}
+
+
+/*navigation*/
+
+#nav.navbar{
+    margin-bottom: 2%;
+    z-index: 3;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    box-shadow:  0px 5px 30px -20px rgba(21, 19, 48, 0.425);
+    opacity: 0.9;
+} 
+ 
+.navbar-brand{
+    font-size: 1.5em;
+}
+.nav-item{
+   padding: 0rem 2rem 0rem 2rem;
+   font-weight: 600;
+   font-size: 1em;
+}
+.nav-item i.bi{
+    font-size: 1.1em;
+   
+}
+.saved{
+    color: lightcoral;
+}
+
+
+/*save and cart banner counts*/
+.saved,.cart{
+    position: relative;
+}
+span.count{
+    position: absolute;
+    border-radius: 10px;
+    font-size: 0.8em;
+    top: 5px;
+    right: -10px;
+}
+
+
+
+/*grid*/
+
+main.container-fluid > .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);   
+    
+}
+main.container-fluid > .grid > div{
+    width: 100% ;
+    height: 100%;
+}
+main.container-fluid > .navbar-brand{
+ margin-left: 1rem;
+} 
+
+/*borders*/
+
+.section1{
+border-right: 2px solid rgba(128, 128, 128, 0.445);
+border-bottom: 2px solid rgba(128, 128, 128, 0.445);
+
+}
+.cta{
+border-bottom: 2px solid rgba(128, 128, 128, 0.445);
+      
+}
+.section3{
+border-right: 2px solid rgba(128, 128, 128, 0.445); 
+}
+
+/*product images carousel*/
+
+.imageDisplay{
+    padding: 2rem 1rem;
+}
+.imageDisplay .carousel{
+    margin-top: 1rem   ;
+    width: 35rem;
+     height: 30rem;
+     
+
+}
+.imageDisplay .carousel .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 30rem;
+}
+
+
+
+
+
+/*C-T-A*/
+.cta{
+    padding: 7rem 1rem 1rem 1.5rem;
+    height: 100%;
+    position: relative;
+}
+.cta .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center left;
+    gap: 0rem 3rem;
+}
+.cta .grid div{
+    margin: 1rem 0rem;
+}
+.cta .grid div h5{
+    font-weight: 500;
+}
+.cta .grid p{
+    margin-bottom: .5rem;
+}
+.cta .grid .price{
+    font-size: 1.3rem;
+}
+.cta .grid .product-name{
+    font-size: 2rem;
+    font-weight: 200;
+}
+.cta .grid .product-colors .colors{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+.cta .grid .product-colors .colors div{
+   display: flex;
+ place-items: center center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0rem .5rem 0rem 0rem;
+  border-radius: 3rem;
+  border: 2px solid rgb(160, 156, 156);
+  cursor: pointer;
+}
+.cta .grid .product-colors .colors div .tick.hidden{
+  display: none;
+}
+.cta .grid .product-sizes div{
+    color: rgb(4, 1, 22);
+    margin:  .5rem .5rem .5rem 0rem;
+    display: inline-block;
+    border: 2px solid #125ecf;
+    box-sizing: border-box;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-weight: 600;
+    font-family: monospace;
+    text-align: center;
+    line-height: 2.3rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.cta .grid .product-sizes div.active{
+    background: #125ecf;
+    color: whitesmoke;
+}
+.cta .grid .product-quantity input{
+    width: 5rem;
+}
+.cta .cta-btn{
+    margin: 1rem auto;
+    
+}
+
+/*user reviews*/
+
+.user-reviews{
+ padding: 3rem 1rem 1rem 1rem;
+}
+.user-reviews .sectionHeader{
+    text-decoration: underline;
+}
+.user-reviews .reviews{
+    margin-top: 2%;
+    padding: 1rem 0rem 1rem .5rem;
+    height: 17rem;
+    overflow-y: scroll ;    
+}
+.reviews::-webkit-scrollbar{
+    width: 13px;
+    background-color: rgb(223, 217, 223);
+    scrollbar-width: 11px;
+}
+.reviews::-webkit-scrollbar-thumb{
+    width: 5px ;
+    background-color: #4987FC;
+    border-radius: 10px;
+    border: 3px solid rgb(223, 217, 223) ;
+       
+}
+.user-reviews .addReview{
+    margin-top: 5%;
+}
+.user-reviews .reviews .review{
+    margin-top: .5rem;
+    border-bottom:1px solid grey;
+    width: 90%;
+}
+.user-reviews .sectionHeader{
+    font-size: 1.4em;
+}
+.user-reviews .reviews .username{
+    font-size: 1.2em;
+}
+.user-reviews .reviews .comment{
+    font-size: 1em;
+}
+
+
+/*details*/
+
+.section4{
+    padding: 3rem 1rem 1rem 1rem;
+    
+}
+.section4 .detail-content{
+    padding: .5rem;
+    margin: 1rem 0rem;
+}
+.section4  h3{
+    padding: .5rem;
+    color: rgb(3, 3, 22);   
+}
+.section4 .detail-content h3{
+    margin: 0px;
+}
+.section4 .detail-content .list-group-item{
+    font-size: .9em;
+}
+.section4  h3 .btn.toggler{
+    float: right;
+}
+.section4 .shipping-info p{
+    padding: 1rem 1rem 0rem 1rem;
+    margin-bottom: .3rem;
+}
+
+/*suggestions*/
+
+.suggestions .container-fluid{
+padding-top: 1%;
+  width:99%;
+  margin: 0 auto;
+  position: relative;
+}
+.suggestions .container-fluid .sectionHeader{
+    margin: 5% 0%;
+    text-transform: capitalize;
+    text-decoration: overline;
+}
+.suggestions .carousel{
+    position: relative;
+}
+
+.card{
+    width: 18rem;
+    border: none;
+    margin: 0px 10px ; 
+           
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease-out;
+}
+.card-img-top{
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    
+}
+.card-body{
+    padding: 1% 1% 0% 3%;
+    margin-top: 5%;
+    position: relative;
+}
+.card-body .product-name{
+    font-size: 1rem;
+}
+.add-to-cart{
+  margin-bottom: 2%;
+  cursor: pointer;
+    width: 40%;
+    text-align: right;
+}
+.add-to-cart:hover{
+    color: #4c80f1;
+}
+.save{
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+/*custom arrows*/
+.prev-arr,.next-arr{
+    display: inline-block;
+    height: 100%;
+    z-index: 5;
+}
+.prev-arr{
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+.prev-arr:hover{
+    color: rgb(170, 167, 167);
+    cursor: pointer;
+}
+.next-arr{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+}
+.next-arr:hover{
+    color: rgb(170, 167, 167);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*footer*/
+
+ 
+footer .container-fluid{
+    padding: 0% 0% 4% 2%;
+    margin-top: 10%;
+
+}
+footer .nav-link{
+  padding: .5rem 0rem;
+}
+footer h4{
+    text-decoration: underline;
+}
+
+footer .brand-name{
+    font-size: 4em;
+    font-weight: lighter;
+    color: rgb(255, 253, 253);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4%;
+}
+footer .brand-name div{
+    border-radius: 20px 20px 5px 5px ;
+    position: absolute;
+   width: 100% ;
+   height: 43px ;
+   background-color: #4987FC;
+    bottom: 0;
+   z-index: -1;
+}
+footer .row{
+    text-align: left;
+    padding: 0px;
+}
+
+
+
+@media(max-width:1024px){
+    .imageDisplay{
+        padding: 2rem 1rem;
+    }
+    .imageDisplay .carousel{
+        margin-top: 1rem   ;
+        width: 25rem;
+         height: 25rem;
+         
+    
+    }
+    .imageDisplay .carousel .carousel-inner .carousel-item img{
+        width: 100%;
+        height: 25rem;
+    }   
+
+    .user-reviews .addReview{
+        margin-top: 9%;
+    }
+}
+
+@media(max-width:768px){
+    .imageDisplay{
+        padding: 2rem 1rem;
+    }
+    .imageDisplay .carousel{
+        margin: 1rem  auto ;
+        width: 20rem;
+         height: 20rem;
+         
+    
+    }
+    .imageDisplay .carousel .carousel-inner .carousel-item img{
+        width: 100%;
+        height: 20rem;
+    }   
+
+    .user-reviews .addReview{
+        margin-top: 9%;
+    }
+
+   
+    .cta{
+        padding: 2rem 1rem 1rem 1.5rem;
+    }
+    .cta .grid{
+        gap: 0rem 1.8rem;
+    }
+    .cta .grid div{
+        margin: 1rem 0rem;
+    }
+    .cta .grid .price{
+        font-size: 1.3rem;
+    }
+    .cta .grid .product-name{
+        font-size: 1.5rem;
+    }
+    .cta .grid .product-colors div{
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+    
+    .cta .grid .product-sizes div{
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+    .cta .cta-btn{
+        margin: 2rem auto 0rem auto;
+    }
+    
+    
+    .reviews{
+        width: 100%;
+    }
+
+    .suggestions .card{
+        width: 14rem;
+        margin: 0rem .3rem;
+    }
+    .suggestions .card-body .product-name{
+        font-size: 1em;
+    }
+    .suggestions .card-body span{
+        font-size: .8em;
+    }
+    .suggestions .card-img-top{
+        width: 10rem;
+        height: 10rem;
+        margin: 1rem auto;
+    }
+
+}
+
+@media(max-width:450px){
+    #nav .navbar-brand{
+        font-size: 1.3em;
+    }
+    .nav-item{
+        padding: 0rem .7rem 0rem .7rem;
+        font-weight: 600;
+        font-size: .8em;
+    }
+    
+    main.container-fluid > .navbar-brand{
+        margin: 0 auto;
+        text-align: center;
+    }
+    main.container-fluid > .grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);   
+        
+    }
+    .section1,.section2,.section3{
+        border:none;
+    }
+
+
+    .imageDisplay{
+        padding: 1rem 1rem;
+    }
+    .imageDisplay .carousel{
+        margin-top: 1rem  ;
+        width: 18rem;
+        height: 18rem;    
+    }
+    .imageDisplay .carousel .carousel-inner .carousel-item img{
+        width: 100%;
+        height: 18rem;
+    }
+
+    
+    .cta{
+        padding: 1rem .5rem .5rem .5rem;
+        border-top:2px solid rgba(128, 128, 128, 0.445);
+    }
+    .cta .grid{
+        gap: 0rem 2rem;
+    }
+    .cta .grid div{
+        margin: 1rem 0rem;
+    }
+    .cta .grid div h5{
+        font-size: .9rem;
+    }
+    .cta .grid .price{
+        font-size: 1rem;
+    }
+    .cta .grid .product-name{
+        font-size: 1.5rem;
+    }
+    .cta .grid .product-colors div{
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+    
+    .cta .grid .product-sizes div{
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    .cta .grid .product-quantity input{
+        width: 3rem;
+    }
+    .cta .cta-btn{
+    position: fixed;
+      bottom: 1rem;
+      width: 92%;
+      opacity: 0.98;
+      z-index: 5;
+      font-size: 1rem;
+    }
+
+    .user-reviews{
+        padding-top: 2rem;
+        grid-area: 4;
+    }
+    .user-reviews .sectionHeader{
+        margin: 1rem auto;
+        text-align: center;
+    }
+    .user-reviews .review .username{
+   font-size: 1em;
+    }
+    .user-reviews .review .comment{
+     font-size: .8em;
+    }
+
+    .section4  h3{
+        padding: .5rem;
+        font-size: 1.2rem;
+        color: rgb(3, 3, 22);   
+    }
+    
+       
+    .suggestions .card{
+        width: 12rem;
+    }
+   .suggestions .card-body .product-name{
+        font-size: 1em;
+    }
+    .suggestions .card-body span{
+        font-size: .8em;
+    }
+    .suggestions .card-img-top{
+        width: 7rem;
+        height: 7rem;
+        margin: .5rem auto;
+    }
+    
+}
+@media(max-width:378px){
+    main.container-fluid{
+       padding: 0rem 0rem;
+    }
+    .imageDisplay{
+        padding: .5rem .5rem;
+    }
+    .imageDisplay .carousel{
+        margin-top: 1rem  ;
+        width: 15rem;
+        height: 15rem;    
+    }
+    .imageDisplay .carousel .carousel-inner .carousel-item img{
+        width: 100%;
+        height: 15rem;
+    }
+
+    .cta {
+        padding-left: 1rem;
+    }
+    .cta .grid .product-name{
+        font-size: 1.3em;
+    }
+
+    .user-reviews{
+        padding: 0rem;
+    }
+    .user-reviews .addReview textarea{
+        width: 90%;
+        margin-left:.5rem;
+        
+    }
+   
+    ul.slick-dots{
+        display: none;
+    }
+    
+    .section4  h3{
+        padding: .5rem;
+        font-size: 1.1rem;
+        color: rgb(3, 3, 22);   
+    }
+  
+
+    
+}

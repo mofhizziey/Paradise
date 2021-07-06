@@ -1,0 +1,452 @@
+html{
+    scroll-behavior: smooth;
+}
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+.sectionHeader{
+    margin-top: 2%;
+    font-family: cursive;
+    font-weight: 600;
+}
+.loader{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-expand{
+    flex-wrap: wrap;
+}
+.scrollTop{
+   position: fixed;
+   bottom: 4%;
+   right: 3%;
+   z-index: 5;
+ padding: 10px;
+ opacity: 0.9;
+ 
+}
+.scrollTop.hide{
+    display: none;
+}
+/*loader*/
+
+.loader.hide{
+    display: none;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.loader .grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: .2em;
+}
+.loader .grid div{
+   width:30px;
+   height: 30px;
+   background-color: rgb(4, 101, 114);
+}
+
+/*category side bar*/
+
+.category-sidebar.container-fluid{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    z-index: 6;
+    background: rgb(5, 3, 17);
+    color: white;
+    padding: 0;
+    left: -30%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.5s linear;
+}
+.category-sidebar.container-fluid::-webkit-scrollbar{
+    display: none;
+}
+.category-sidebar.container-fluid .list-group-item{
+    background: none;
+    border: 1px solid ;
+}
+.category-sidebar.container-fluid .list-group-item.active{
+    background: rgb(255, 255, 255);
+    border: none;
+    color: black;
+}
+.category-sidebar.container-fluid.active{
+    left: 0;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.404);
+}
+.category-sidebar .close-sidebar{
+    position: absolute;
+    right: .3rem;
+}
+.category-sidebar .side-top{
+  width:100%;
+  padding: 0% 0% 0% 3%;
+}
+.category-sidebar .side-top .navbar-title{
+    margin-top: 4%;
+}
+.category-btn{
+    position: fixed;
+    top: 7%;
+    left: 1.5rem;
+    font-size: 1em;
+    z-index: 3;
+}
+.category-sidebar .side-main{
+    padding: 1rem;
+}
+.category-sidebar .side-main .options{
+    margin-top: 1.5rem;
+}
+.category-sidebar .side-main .options .list-group-item{
+    margin-bottom: .3rem;
+    border-radius: .4rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.category-sidebar .womens-category.hide{
+    display: none;
+}
+.category-sidebar .mens-category.hide{
+    display: none;
+}
+
+
+/*fade background on active sidebar*/
+
+.fade-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    z-index: 6;
+    display: none;
+}
+.fade-bg.active{
+    display: block;
+    opacity: 0.1;
+}
+
+/*merch switch*/
+
+.merch-switch button{
+    border-radius: 0px;
+}
+.merch-switch button:hover{
+  box-shadow: 2px 2px 20px -5px rgba(39, 38, 38, 0.185);
+}
+.merch-switch button.active{
+    border-bottom: 4px solid rgb(5, 2, 39);
+}
+btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(13,110,253,.25);
+}
+
+
+/*navigation*/
+
+#nav.navbar{
+    margin-bottom: 2%;
+    z-index: 3;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    box-shadow:  0px 5px 30px -20px rgba(21, 19, 48, 0.425);
+    opacity: 0.9;
+} 
+ 
+.navbar-brand{
+    font-size: 1.5em;
+}
+.nav-item{
+   padding: 0rem 2rem 0rem 2rem;
+   font-weight: 600;
+   font-size: 1em;
+}
+.nav-item i.bi{
+    font-size: 1.1em;
+   
+}
+.saved{
+    color: lightcoral;
+}
+
+/*save and cart banner counts*/
+
+.saved,.cart{
+    position: relative;
+}
+span.count{
+    position: absolute;
+    border-radius: 10px;
+    font-size: 0.8em;
+    top: 5px;
+    right: -10px;
+}
+
+/*filter*/
+
+.filter .container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+
+}
+.filter .container-fluid div{
+   flex: 1;  
+   margin-left: 1%;
+}
+
+
+
+
+/*product display*/
+ 
+#mens-wears.hide{
+    display: none;
+}
+#women-wears.hide{
+    display: none;
+}
+#mens-wears .container-fluid .display,#women-wears .container-fluid .display{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(15rem,auto)) ;
+    gap: 4em 1em; 
+    margin: 3% 0% 0% 0%; 
+}
+#mens-wears .mens-category.hide,#women-wears .womens-category.hide{
+    display: none;
+}
+#mens-wears .mens-category.active{
+   
+}
+.card{
+    border: none;
+    margin: 5% 0% 0% 0%;
+    padding: 1% 1% 2% 1% ;
+    height: 23rem;
+       
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease-out;
+}
+.card-img-top{
+    margin: 0 auto;
+    height: 12rem;
+    width: 12rem;
+    
+}
+.card-body{
+    padding: 1% 1% 2% 3%;
+    margin-top: 5%;
+    position: relative;
+}
+.card-body .product-name{
+    font-size: 1rem;
+}
+.add-to-cart{
+  margin-bottom: 2%;
+  cursor: pointer;
+    width: 5rem;
+    text-align: right;
+}
+.add-to-cart:hover{
+    color: #4c80f1;
+}
+.save{
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+/*footer*/
+
+ 
+footer .container-fluid{
+    padding: 0% 0% 4% 2%;
+    margin-top: 10%;
+
+}
+footer .nav-link{
+  padding: .5rem 0rem;
+}
+footer h4{
+    text-decoration: underline;
+}
+
+footer .brand-name{
+    font-size: 4em;
+    font-weight: lighter;
+    color: rgb(255, 253, 253);
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4%;
+}
+footer .brand-name div{
+    border-radius: 20px 20px 5px 5px ;
+    position: absolute;
+   width: 100% ;
+   height: 43px ;
+   background-color: #4987FC;
+    bottom: 0;
+   z-index: -1;
+}
+footer .row{
+    text-align: left;
+    padding: 0px;
+}
+
+@media(max-width:1024px){
+.category-btn{
+    top: 9%;
+}   
+
+}
+@media(max-width:768px){
+    .category-sidebar.container-fluid{
+        left:-40%;
+        width:40%
+        
+    }
+    .filter .container-fluid{
+        margin-top: 10%;
+    }
+    .card{
+        height: 100%;
+    }
+    .card-img-top{
+        width:9rem;
+        height: 9rem;
+        margin: .5rem 0rem;
+        margin: 0 auto;
+    }
+    .card-body span {
+      padding: 0rem .5rem;
+      font-size: .9rem;
+      
+    }
+    .card-body{
+        padding: 0rem .5rem;
+    }
+    .category-btn{
+        position: fixed;
+        top: 20%;
+        left: 1.5rem;
+        font-size: .8em;
+        z-index: 3;
+    }
+    #mens-wears .container-fluid .display,#women-wears .container-fluid .display{
+        grid-template-columns: repeat(3,1fr);
+        padding: 0rem .5rem;
+        gap: 3rem 1rem;     
+    }
+}
+@media(max-width:426px){
+    .filter .container-fluid{
+        margin-top: 15%;
+    }
+    .category-btn{
+        left: 1rem;
+        top: 18%;
+    }
+    #nav .navbar-brand{
+        font-size: 1.3em;
+    }
+    .sectionHeader{
+        margin: 2rem 0rem;
+        font-family: cursive;
+        font-weight: 600;
+        font-size: 1.3em;
+        text-decoration: underline;
+    }.category-sidebar.container-fluid .side-main{
+        font-size: .8em;
+    }
+    .category-sidebar.container-fluid{
+        width: 60%;
+        left:-63%;
+        
+    }
+    .nav-item{
+        padding: 0rem .7rem 0rem .7rem;
+        font-weight: 600;
+        font-size: .8em;
+     }
+     #mens-wears .container-fluid .display,#women-wears .container-fluid .display{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0rem .5rem;
+        gap: 3rem .5rem;     
+    }
+
+    /*cards*/
+    
+    .card{
+        width: 12rem;
+    }
+    .card-body .product-name{
+        font-size: 1em;
+    }
+    .card-body span{
+        font-size: .8em;
+    }
+    .card-img-top{
+        width: 7rem;
+        height: 7rem;
+        margin: .5rem auto;
+    }
+}
+@media(max-width:375px){
+    .category-sidebar.container-fluid{
+        width: 80%;
+        left:-83%;
+    }
+    .filter .container-fluid{
+        margin-top: 17%;
+    }
+    .card{
+        width: 10rem;
+    }
+    .card-body .product-name{
+        font-size: 1em;
+    }
+    .card-body span{
+        font-size: .8em;
+    }
+    .card-img-top{
+        width: 7rem;
+        height: 7rem;
+        margin: .5rem auto;
+    }
+}
+@media(max-width:320px){
+    #mens-wears .container-fluid .display,#women-wears .container-fluid .display{
+        grid-template-columns: repeat(auto-fill,minmax(15rem,auto));
+        padding: 0rem .5rem;
+        place-items: center center;
+        gap: 1rem .5rem;     
+    }
+    .card{
+        width: 15rem;
+        height: 22rem;
+    }
+    .card-body .product-name{
+        font-size: 1em;
+    }
+    .card-body span{
+        font-size: .8em;
+    }
+    .card-img-top{
+        width: 10rem;
+        height: 10rem;
+        margin: .7rem auto;
+    }
+}
