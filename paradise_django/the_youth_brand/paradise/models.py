@@ -1,9 +1,10 @@
 from django.db import models
 from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
-from django.contrib.auth.models import User
-from address.models import BillingAddress
 
+from address.models import BillingAddress
+from django.conf import settings
+User = settings.AUTH_USER_MODEL
 
 
 # Create your models here.
@@ -36,7 +37,7 @@ PRODUCT_COLOR_CHOICES = (
 )
 
 class Product(models.Model):
-
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=100, null=False)
     picture = models.FileField(upload_to='Releases')
     price = models.IntegerField()
@@ -67,7 +68,7 @@ class Product(models.Model):
 
 class OrderProduct(models.Model):
     # Extending the Product model to create another model with all the product
-
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=True, default=1)
     ordered = models.BooleanField(default=False)
@@ -82,7 +83,7 @@ class OrderProduct(models.Model):
         return f'{self.quantity} pcs of {self.product}'
 
 class Order(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, )
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     start_date = models.DateTimeField(auto_now_add=True)
     order_date = models.DateTimeField()
     products = models.ManyToManyField(OrderProduct)

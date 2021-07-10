@@ -3,7 +3,8 @@ from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 # Create your models here.
-
+from django.conf import settings
+User = settings.AUTH_USER_MODEL
 
 class BillingAddress(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
